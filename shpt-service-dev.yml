@@ -1,0 +1,8 @@
+shpt:
+  title: "Dev"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
