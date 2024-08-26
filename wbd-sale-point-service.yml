@@ -1,0 +1,48 @@
+  r2dbc:
+    host: 192.168.1.251
+    port: 3306
+    database: extm1base
+    username: dbuser
+    password: 367Qh7dzNB
+  #    url: r2dbc:mariadb://192.168.1.251:3306/extm1base
+  data:
+    mongodb:
+      host: 192.168.1.41
+      port: 27017
+      username: mirep
+      password: cWlp40To
+      database: maBase
+    redis:
+      host: 192.168.1.41
+      port: 6379
+  devtools:
+    livereload:
+      port: 0
+debug: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+
+server:
+  port: 8087
+
+mirep:
+  services-url:
+    fm3-geozone-service: http://fm3-geozone-service/v1
+    cross-dock-service: http://wbd-cross-dock-service/v1
+
+logging:
+  # level:
+  #   org.springframework.r2dbc: info
+  #   org.springframework.web.reactive.function.client: info
+  #   org.springframework.data.mongodb: info
+  #   ru.gkmirep.wbdsalepointservice.controllers.SalePointController: info
+  #   ru.gkmirep.wbdsalepointservice.controllers.SalePointsController: info
+  #   ru.gkmirep.wbdsalepointservice.services.Fm3GeoZoneService: info
+  #   ru.gkmirep.wbdsalepointservice.services.SalePointService: info
+  #   ru.gkmirep.wbdsalepointservice.services.SalePointRDBCService: info
+  #   ru.gkmirep.wbdsalepointservice.services.CrossDockService: info
+  file:
+    name: logs\sale-point-service.log
