@@ -30,4 +30,4 @@ logging:
     
 xlsx:
   upload_path: ./upload
-  shpt_path: =./shpt
+  shpt_path: ./shpt
