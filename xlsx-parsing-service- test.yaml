@@ -27,6 +27,7 @@ logging:
 #     name: xlsx-service
   level:
     ru.gkmirep.xlsxparsingservice.services.XLSXLoadingService: debug
-# xlsx:
-#   upload_path: ./upload
-#   shpt_path: =./shpt
+    
+xlsx:
+  upload_path: ./upload
+  shpt_path: =./shpt
