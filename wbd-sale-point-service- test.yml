@@ -18,7 +18,8 @@
   devtools:
     livereload:
       port: 0
-debug: false
+
+debug: true
 
 eureka:
   client:
