@@ -20,7 +20,7 @@ spring:
     livereload:
       port: 0
 
-debug: true
+debug: false
 
 eureka:
   client:
