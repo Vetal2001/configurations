@@ -1,1 +1,44 @@
+server:
+  port: 8084
+
+spring:
+  devtools:
+    livereload:
+      port: 0
+  threads:
+    virtual:
+      enabled: true
+  rsocket:
+    server:
+      transport: websocket
+      mapping-path: /rsocket
+  r2dbc:
+    url: r2dbc:mariadb://192.168.1.251:3306/extm1base
+    username: dbuser
+    password: 367Qh7dzNB
+  data:
+    mongodb:
+      host: 192.168.1.41
+      port: 27017
+      username: mirep
+      password: cWlp40To
+      database: maBase
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+
+debug: false
+
+logging:
+  file:
+    path: ./logs
+    name: wbd-warehouse
+  # level:
+  #   org.springframework.r2dbc: debug
+  #   org.springframework.web.reactive.function.client: debug
+  #   ru.gkmirep.wbdwarehouseservice.services.WarehouseService: debug
+  #   ru.gkmirep.wbdwarehouseservice.services.Fm3GeoZoneService: debug
 
