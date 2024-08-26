@@ -14,3 +14,17 @@ eureka:
   instance:
     prefer-ip-address: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+    enabled-by-default: true
+
+logging:
+  file:
+    path: ./logs
+    name: xlsx-service
+xlsx:
+  upload_path: ./upload
+  shpt_path: =./shpt
