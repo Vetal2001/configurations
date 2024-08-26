@@ -41,4 +41,3 @@ logging:
   #   org.springframework.web.reactive.function.client: debug
   #   ru.gkmirep.wbdwarehouseservice.services.WarehouseService: debug
   #   ru.gkmirep.wbdwarehouseservice.services.Fm3GeoZoneService: debug
-
