@@ -21,12 +21,12 @@ debug: false
 #         include: *
 #     enabled-by-default: true
 
-# logging:
+logging:
 #   file:
 #     path: ./logs
 #     name: xlsx-service
-#   level:
-#     ru.gkmirep.xlsxparsingservice.services.XLSXLoadingService: debug
+  level:
+    ru.gkmirep.xlsxparsingservice.services.XLSXLoadingService: debug
 # xlsx:
 #   upload_path: ./upload
 #   shpt_path: =./shpt
