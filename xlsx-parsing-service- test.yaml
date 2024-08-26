@@ -1,32 +1,32 @@
-spring:
-  threads:
-    virtual:
-      enabled: true
-eureka:
-  client:
-    service-url:
-      defaultZone: http://192.168.1.41:9999/eureka/
-  instance:
-    prefer-ip-address: true
+# spring:
+#   threads:
+#     virtual:
+#       enabled: true
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: http://192.168.1.41:9999/eureka/
+#   instance:
+#     prefer-ip-address: true
 
-server:
-  port: 9091
+# server:
+#   port: 9091
 
 debug: false
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: *
-    enabled-by-default: true
+# management:
+#   endpoints:
+#     web:
+#       exposure:
+#         include: *
+#     enabled-by-default: true
 
-logging:
-  file:
-    path: ./logs
-    name: xlsx-service
-  level:
-    ru.gkmirep.xlsxparsingservice.services.XLSXLoadingService: debug
-xlsx:
-  upload_path: ./upload
-  shpt_path: =./shpt
+# logging:
+#   file:
+#     path: ./logs
+#     name: xlsx-service
+#   level:
+#     ru.gkmirep.xlsxparsingservice.services.XLSXLoadingService: debug
+# xlsx:
+#   upload_path: ./upload
+#   shpt_path: =./shpt
