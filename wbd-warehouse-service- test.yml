@@ -1,6 +1,8 @@
 server:
   port: 8082
 
+debug: true
+
 logging:
   level:
     org.springframework.r2dbc: info
