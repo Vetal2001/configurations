@@ -1,0 +1,6 @@
+logging:
+ level:
+   org.springframework.r2dbc: info
+   org.springframework.web.reactive.function.client: info
+   ru.gkmirep.wbdwarehouseservice.services.WarehouseService: debug
+   ru.gkmirep.wbdwarehouseservice.services.Fm3GeoZoneService: debug
