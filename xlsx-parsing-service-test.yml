@@ -1,5 +1,11 @@
+server:
+  port: 9091
+
+debug: false
+
 logging:
   file:
     path: ./logs
+    name: xlsx-service
   level:
-    ru.gkmirep.xlsxparsingservice: info
+    ru.gkmirep.xlsxparsingservice.services.XLSXLoadingService: debug
