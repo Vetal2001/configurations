@@ -36,6 +36,14 @@ debug: false
 
 # server:
 #   port: 8088
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: refresh
+
   
 mirep:
   paths:
@@ -68,5 +76,4 @@ logging:
   #   ru.gkmirep.tripservice.services.http_services.XlsxParsingService: info
   #   ru.gkmirep.tripservice.services.XlsxReportService: debug
   file:
-    name: trip-service.log
-    path: ./logs
+    name: /logs/trip-service.log
