@@ -26,7 +26,7 @@ logging:
     name: /logs/xlsx-service.log
 
 xlsx:
-  upload-path: /upload
-  shpt-path: /shpt
+  upload-path: ./upload
+  shpt-path: ./shpt
 
 debug: false
