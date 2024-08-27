@@ -12,12 +12,13 @@ spring:
             response-timeout: 200000
             connect-timeout: 200000
 
-# management:
-#   endpoints:
-#     web:
-#       exposure:
-#         include: *
-  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+    enabled-by-default: true
+    
 server:
   port: 7070
 
