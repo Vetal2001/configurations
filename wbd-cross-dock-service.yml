@@ -1,5 +1,6 @@
 spring:
   devtools:
+    add-properties: false
     enabled: false
   threads:
     virtual:
