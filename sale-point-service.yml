@@ -31,6 +31,13 @@ eureka:
     
 server:
   port: 8087
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+    enabled-by-default: true
 
 mirep:
   services-url:
@@ -49,5 +56,4 @@ logging:
   #   ru.gkmirep.wbdsalepointservice.services.SalePointRDBCService: info
   #   ru.gkmirep.wbdsalepointservice.services.CrossDockService: info
   file:
-    path: ./logs 
-    name: sale-point
+    name: /logs/sale-point.log
