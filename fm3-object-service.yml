@@ -16,14 +16,21 @@ eureka:
 
 debug: false
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+    enabled-by-default: true
+
+
 logging:
   # level:
   #   org.springframework.r2dbc: info
   #   ru.gkmirep.fm3objectservice.repositories.ObjectSQLRepository: info
   #   ru.gkmirep.fm3objectservice.services.ObjectService: info
   file:
-    name: fm3-object
-    path: .\logs
+    name: /logs/fm3-object.log
     
 # server:
 #   port: 8089
