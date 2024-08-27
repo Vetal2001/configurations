@@ -2,8 +2,8 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: trip-service
-          uri: lb://trip-service
+        - id: wbd-trip-service
+          uri: lb://wbd-trip-service
           predicates:
             - Path=/trips/**
           filters:
