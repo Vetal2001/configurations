@@ -1,0 +1,30 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: trip-service
+          uri: lb://trip-service
+          predicates:
+            - Path=/trips/**
+          filters:
+            - RewritePath=/trips/?(?<segment>.*),/$\{segment}
+          metadata:
+            response-timeout: 200000
+            connect-timeout: 200000
+  
+server:
+  port: 7070
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+      
+debug: false
+logging:
+  file:
+    path: ./logs
+    name: gateway
+  level:
+    org.springframework.boot.autoconfigure.web.reactive.error.AbstractErrorWebExceptionHandler: debug
+    org.springframework.web.server.adapter.HttpWebHandlerAdapter: debug
