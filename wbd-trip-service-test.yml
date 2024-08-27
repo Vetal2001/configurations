@@ -1,18 +1,29 @@
-server:
-  port: 9092
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    service-url:
-      defaultZone: http://localhost:9999/eureka/
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-    enabled-by-default: true
-trips:
-  test: test
+debug: true
+
+# server:
+#   port: 8088
+  
+mirep:
+  # paths:
+  #   reports: ./reports
+logging:
+  level:
+    org.springframework.r2dbc: info
+    org.springframework.data.mongodb: info
+    org.springframework.web.reactive.function.client: info
+    ru.gkmirep.tripservice.controllers.TripController: debug
+    ru.gkmirep.tripservice.controllers.TripsMonitoringReportController: debug
+    ru.gkmirep.tripservice.mappers.trip.TripMapperService: debug
+    ru.gkmirep.tripservice.services.http_services.Fm3ObjectService: info
+    ru.gkmirep.tripservice.services.http_services.SalePointService: info
+    ru.gkmirep.tripservice.services.http_services.CrossDockService: info
+    ru.gkmirep.tripservice.services.http_services.Fm3TelematicsDataService: info
+    ru.gkmirep.tripservice.services.rdbc.TripServiceRDBC: info
+    ru.gkmirep.tripservice.services.trip.TripService: info
+    ru.gkmirep.tripservice.services.trip.TripReportService: info
+    ru.gkmirep.tripservice.services.trip.TripStatesService: info
+    ru.gkmirep.tripservice.services.trip.WbdSHPTTripService: info
+    ru.gkmirep.tripservice.services.trip.WbdMonitoringReportService: info
+    ru.gkmirep.tripservice.services.trip.WbdTempReportService: info
+    ru.gkmirep.tripservice.services.http_services.XlsxParsingService: info
+    ru.gkmirep.tripservice.services.XlsxReportService: debug
