@@ -11,6 +11,12 @@ spring:
           metadata:
             response-timeout: 200000
             connect-timeout: 200000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
   
 server:
   port: 7070
