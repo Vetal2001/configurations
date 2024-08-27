@@ -1,5 +1,9 @@
 spring:
   devtools:
+    livereload:
+      port: 0
+      enabled: false
+    add-properties: false
   r2dbc:
     host: 192.168.1.251
     port: 3306
