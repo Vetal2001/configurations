@@ -11,10 +11,19 @@ spring:
     url: r2dbc:mariadb://192.168.1.251:3306/fm3base
     username: dbuser
     password: 367Qh7dzNB
+
 eureka:
   client:
     service-url:
       defaultZone: http://192.168.1.41:9999/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+    enabled-by-default: true
+
 
 debug: false
 
@@ -26,8 +35,7 @@ logging:
   #   ru.gkmirep.fm3telematicsdataservice.services.Fm3TelematicsDataService: info
   #   ru.gkmirep.fm3telematicsdataservice.repositories.Fm3TelematicsDataRepository: info
   file:
-    name: fm3-telematics-data
-    path: .\logs
+    name: /logs/fm3-telematics-data.log
 
 mirep:
   wbd-props:
