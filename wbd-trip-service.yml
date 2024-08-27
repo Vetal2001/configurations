@@ -1,16 +1,72 @@
-server:
-  port: 9092
+spring:
+  devtools:
+    livereload:
+      port: 0
+      enabled: false
+    add-properties: false
+  threads:
+    virtual:
+      enabled: true
+  data:
+    redis:
+      host: 192.168.1.41
+      port: 6379
+    mongodb:
+      host: 192.168.1.41
+      port: 27017
+      username: mirep
+      password: cWlp40To
+      database: maBase
+  r2dbc:
+    host: 192.168.1.251
+    port: 3306
+    database: extm1base
+    #    url: r2dbc:mariadb://192.168.1.251:3306/extm1base
+    username: dbuser
+    password: 367Qh7dzNB
+
 eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
   instance:
     prefer-ip-address: true
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    service-url:
-      defaultZone: http://localhost:9999/eureka/
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-#    enabled-by-default: true
+    
+debug: false
+
+# server:
+#   port: 8088
+  
+mirep:
+  paths:
+    reports: ./reports
+  services-url:
+    sale-point-service: http://sale-point-service/v1
+    cross-dock-service: http://wbd-cross-dock-service/v1
+    fm3-object-service: http://fm3-object-service/v1
+    fm3-telematics-data-service: http://fm3-telematics-data-service/v1
+    xlsx-parsing-service: http://xlsx-parsing-service/v1
+logging:
+  level:
+    org.springframework.r2dbc: info
+    org.springframework.data.mongodb: info
+    org.springframework.web.reactive.function.client: info
+    ru.gkmirep.tripservice.controllers.TripController: debug
+    ru.gkmirep.tripservice.controllers.TripsMonitoringReportController: debug
+    ru.gkmirep.tripservice.mappers.trip.TripMapperService: debug
+    ru.gkmirep.tripservice.services.http_services.Fm3ObjectService: info
+    ru.gkmirep.tripservice.services.http_services.SalePointService: info
+    ru.gkmirep.tripservice.services.http_services.CrossDockService: info
+    ru.gkmirep.tripservice.services.http_services.Fm3TelematicsDataService: info
+    ru.gkmirep.tripservice.services.rdbc.TripServiceRDBC: info
+    ru.gkmirep.tripservice.services.trip.TripService: info
+    ru.gkmirep.tripservice.services.trip.TripReportService: info
+    ru.gkmirep.tripservice.services.trip.TripStatesService: info
+    ru.gkmirep.tripservice.services.trip.WbdSHPTTripService: info
+    ru.gkmirep.tripservice.services.trip.WbdMonitoringReportService: info
+    ru.gkmirep.tripservice.services.trip.WbdTempReportService: info
+    ru.gkmirep.tripservice.services.http_services.XlsxParsingService: info
+    ru.gkmirep.tripservice.services.XlsxReportService: debug
+  file:
+    name: trip-service
+    path: ./logs
