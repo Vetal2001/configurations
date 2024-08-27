@@ -2,9 +2,6 @@ server:
   port: 8084
 
 spring:
-  threads:
-    virtual:
-      enabled: true
   rsocket:
     server:
       transport: websocket
@@ -20,6 +17,14 @@ spring:
       username: mirep
       password: cWlp40To
       database: maBase
+  devtools:
+    livereload:
+      port: 0
+      enabled: false
+    add-properties: false
+  threads:
+    virtual:
+      enabled: true
 
 eureka:
   client:
@@ -28,6 +33,13 @@ eureka:
       defaultZone: http://192.168.1.41:9999/eureka/
   instance:
     prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+    enabled-by-default: true
 
 debug: false
 
