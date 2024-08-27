@@ -50,4 +50,5 @@ logging:
   #   ru.gkmirep.wbdsalepointservice.services.SalePointRDBCService: info
   #   ru.gkmirep.wbdsalepointservice.services.CrossDockService: info
   file:
-    name: logs\sale-point.log
+    path: ./logs 
+    name: sale-point
