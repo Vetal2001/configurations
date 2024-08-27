@@ -14,6 +14,14 @@ eureka:
     service-url:
       defaultZone: http://192.168.1.41:9999/eureka/
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+    enabled-by-default: true
+
+
 debug: false
 
 logging:
@@ -21,8 +29,7 @@ logging:
   #   org.springframework.r2dbc: debug
   #   ru.gkmirep.fm3geozone.controllers.GeoZoneController: debug
   file:
-    name: fm3-geozone
-    path: .\logs
+    name: /logs/fm3-geozone.log
     
 # server:
 #   port: 8086
