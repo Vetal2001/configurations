@@ -1,0 +1,6 @@
+debug: false
+
+logging:
+  level:
+    org.springframework.r2dbc: debug
+    ru.gkmirep.fm3geozone.controllers.GeoZoneController: debug
