@@ -1,1 +1,14 @@
+server:
+  port: 7072
 
+logging:
+  level:
+    org.springframework.r2dbc: info
+    org.springframework.web.reactive.function.client: info
+    org.springframework.data.mongodb: info
+    ru.gkmirep.wbdsalepointservice.controllers.SalePointController: info
+    ru.gkmirep.wbdsalepointservice.controllers.SalePointsController: info
+    ru.gkmirep.wbdsalepointservice.services.Fm3GeoZoneService: info
+    ru.gkmirep.wbdsalepointservice.services.SalePointService: info
+    ru.gkmirep.wbdsalepointservice.services.SalePointRDBCService: info
+    ru.gkmirep.wbdsalepointservice.services.CrossDockService: info
