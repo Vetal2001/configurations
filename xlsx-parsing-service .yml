@@ -23,11 +23,10 @@ management:
 
 logging:
   file:
-    path: ./logs
-    name: xlsx-service
+    name: /logs/xlsx-service.log
 
 xlsx:
-  upload-path: ./upload
-  shpt-path: ./shpt
+  upload-path: /upload
+  shpt-path: /shpt
 
 debug: false
