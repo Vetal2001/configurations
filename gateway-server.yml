@@ -12,12 +12,12 @@ spring:
             response-timeout: 200000
             connect-timeout: 200000
 
-# management:
-#   endpoints:
-#     web:
-#       exposure:
-#         include: *
-#     enabled-by-default: true
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: refresh
     
 server:
   port: 7070
@@ -33,7 +33,7 @@ debug: false
 logging:
   file:
     # path: ./logs
-    name: ./logs/gateway-1.log
+    name: /logs/gateway-1.log
   level:
     org.springframework.boot.autoconfigure.web.reactive.error.AbstractErrorWebExceptionHandler: debug
     org.springframework.web.server.adapter.HttpWebHandlerAdapter: debug
