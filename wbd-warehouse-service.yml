@@ -33,8 +33,7 @@ debug: false
 
 logging:
   file:
-    path: ./logs
-    name: wbd-warehouse
+    name: /logs/wbd-warehouse.log
   # level:
   #   org.springframework.r2dbc: debug
   #   org.springframework.web.reactive.function.client: debug
