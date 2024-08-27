@@ -68,5 +68,5 @@ logging:
   #   ru.gkmirep.tripservice.services.http_services.XlsxParsingService: info
   #   ru.gkmirep.tripservice.services.XlsxReportService: debug
   file:
-    name: trip-service
+    name: trip-service.log
     path: ./logs
