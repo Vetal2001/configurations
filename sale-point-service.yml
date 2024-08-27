@@ -17,8 +17,7 @@ spring:
       host: 192.168.1.41
       port: 6379
   devtools:
-    livereload:
-      port: 0
+    add-properties: false
 
 debug: false
 
