@@ -1,0 +1,34 @@
+spring:
+  devtools:
+  r2dbc:
+    host: 192.168.1.251
+    port: 3306
+    database: fm3base
+    url: r2dbc:mariadb://192.168.1.251:3306/fm3base
+    username: dbuser
+    password: 367Qh7dzNB
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+
+debug: false
+
+logging:
+  level:
+    org.springframework.r2dbc: info
+    org.springframework.web.reactive.function.client: info
+    ru.gkmirep.fm3telematicsdataservice.controllers.Fm3TelematicsDataController: debug
+    ru.gkmirep.fm3telematicsdataservice.services.Fm3TelematicsDataService: info
+    ru.gkmirep.fm3telematicsdataservice.repositories.Fm3TelematicsDataRepository: info
+  file:
+    name: fm3-telematics-data
+    path: .\logs
+
+mirep:
+  wbd-props:
+    begin-offset: 2
+    end-offset: 4
+
+server:
+  port: 8001
