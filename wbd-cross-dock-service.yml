@@ -27,6 +27,13 @@ eureka:
   instance:
     prefer-ip-address: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+    enabled-by-default: true
+
 debug: false
 
 server:
@@ -39,8 +46,7 @@ mirep:
 
 logging:
   file:
-    path: ./logs
-    name: wbd-cross-dock
+    name: /logs/wbd-cross-dock.log
   # level:
     # org.springframework.r2dbc: debug
     # org.springframework.web.reactive.function.client: debug
