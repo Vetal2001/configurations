@@ -2,6 +2,11 @@ server:
   port: 9091
 
 spring:
+  devtools:
+    livereload:
+      port: 0
+      enabled: false
+    add-properties: false
   threads:
     virtual:
       enabled: true
