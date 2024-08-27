@@ -1,0 +1,49 @@
+spring:
+  devtools:
+    enabled: false
+  threads:
+    virtual:
+      enabled: true
+  data:
+    redis:
+      host: 192.168.1.41
+      port: 6379
+    mongodb:
+      host: 192.168.1.41
+      port: 27017
+      username: mirep
+      password: cWlp40To
+      database: maBase
+  r2dbc:
+    url: r2dbc:mariadb://192.168.1.251:3306/extm1base
+    username: dbuser
+    password: 367Qh7dzNB
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+  instance:
+    prefer-ip-address: true
+
+debug: false
+
+server:
+  port: 8085
+
+mirep:
+  services-url:
+    fm3-geozone-service: http://fm3-geozone-service/v1
+    warehouse-service: http://wbd-warehouse-service/v1
+
+logging:
+  file:
+    path: ./logs
+    name: wbd-cross-dock
+  # level:
+    # org.springframework.r2dbc: debug
+    # org.springframework.web.reactive.function.client: debug
+    # ru.gkmirep.wbdcrossdockservice.services.CrossDockService: debug
+    # ru.gkmirep.wbdcrossdockservice.services.Fm3GeoZoneService: debug
+    # ru.gkmirep.wbdcrossdockservice.services.WarehouseService: debug
+    # ru.gkmirep.wbdcrossdockservice.mappers: debug
