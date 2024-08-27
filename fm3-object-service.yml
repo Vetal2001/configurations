@@ -1,0 +1,29 @@
+spring:
+  devtools:
+    livereload:
+      port: 0
+      enabled: false
+    add-properties: false
+  r2dbc:
+    url: r2dbc:mariadb://192.168.1.251:3306/fm3base
+    username: dbuser
+    password: 367Qh7dzNB
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+
+debug: false
+
+logging:
+  # level:
+  #   org.springframework.r2dbc: info
+  #   ru.gkmirep.fm3objectservice.repositories.ObjectSQLRepository: info
+  #   ru.gkmirep.fm3objectservice.services.ObjectService: info
+  file:
+    name: fm3-object
+    path: .\logs
+    
+# server:
+#   port: 8089
