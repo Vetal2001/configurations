@@ -47,26 +47,26 @@ mirep:
     fm3-telematics-data-service: http://fm3-telematics-data-service/v1
     xlsx-parsing-service: http://xlsx-parsing-service/v1
 logging:
-  level:
-    org.springframework.r2dbc: info
-    org.springframework.data.mongodb: info
-    org.springframework.web.reactive.function.client: info
-    ru.gkmirep.tripservice.controllers.TripController: debug
-    ru.gkmirep.tripservice.controllers.TripsMonitoringReportController: debug
-    ru.gkmirep.tripservice.mappers.trip.TripMapperService: debug
-    ru.gkmirep.tripservice.services.http_services.Fm3ObjectService: info
-    ru.gkmirep.tripservice.services.http_services.SalePointService: info
-    ru.gkmirep.tripservice.services.http_services.CrossDockService: info
-    ru.gkmirep.tripservice.services.http_services.Fm3TelematicsDataService: info
-    ru.gkmirep.tripservice.services.rdbc.TripServiceRDBC: info
-    ru.gkmirep.tripservice.services.trip.TripService: info
-    ru.gkmirep.tripservice.services.trip.TripReportService: info
-    ru.gkmirep.tripservice.services.trip.TripStatesService: info
-    ru.gkmirep.tripservice.services.trip.WbdSHPTTripService: info
-    ru.gkmirep.tripservice.services.trip.WbdMonitoringReportService: info
-    ru.gkmirep.tripservice.services.trip.WbdTempReportService: info
-    ru.gkmirep.tripservice.services.http_services.XlsxParsingService: info
-    ru.gkmirep.tripservice.services.XlsxReportService: debug
+  # level:
+  #   org.springframework.r2dbc: info
+  #   org.springframework.data.mongodb: info
+  #   org.springframework.web.reactive.function.client: info
+  #   ru.gkmirep.tripservice.controllers.TripController: debug
+  #   ru.gkmirep.tripservice.controllers.TripsMonitoringReportController: debug
+  #   ru.gkmirep.tripservice.mappers.trip.TripMapperService: debug
+  #   ru.gkmirep.tripservice.services.http_services.Fm3ObjectService: info
+  #   ru.gkmirep.tripservice.services.http_services.SalePointService: info
+  #   ru.gkmirep.tripservice.services.http_services.CrossDockService: info
+  #   ru.gkmirep.tripservice.services.http_services.Fm3TelematicsDataService: info
+  #   ru.gkmirep.tripservice.services.rdbc.TripServiceRDBC: info
+  #   ru.gkmirep.tripservice.services.trip.TripService: info
+  #   ru.gkmirep.tripservice.services.trip.TripReportService: info
+  #   ru.gkmirep.tripservice.services.trip.TripStatesService: info
+  #   ru.gkmirep.tripservice.services.trip.WbdSHPTTripService: info
+  #   ru.gkmirep.tripservice.services.trip.WbdMonitoringReportService: info
+  #   ru.gkmirep.tripservice.services.trip.WbdTempReportService: info
+  #   ru.gkmirep.tripservice.services.http_services.XlsxParsingService: info
+  #   ru.gkmirep.tripservice.services.XlsxReportService: debug
   file:
     name: trip-service
     path: ./logs
