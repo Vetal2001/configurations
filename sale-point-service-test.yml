@@ -5,7 +5,7 @@ logging:
     org.springframework.data.mongodb: info
     ru.gkmirep.wbdsalepointservice.controllers.SalePointController: info
     ru.gkmirep.wbdsalepointservice.controllers.SalePointsController: info
-    ru.gkmirep.wbdsalepointservice.services.Fm3GeoZoneService: info
+    ru.gkmirep.wbdsalepointservice.services.Fm3GeoZoneService: trace
     ru.gkmirep.wbdsalepointservice.services.SalePointService: info
     ru.gkmirep.wbdsalepointservice.services.SalePointRDBCService: info
     ru.gkmirep.wbdsalepointservice.services.CrossDockService: info
