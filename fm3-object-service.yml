@@ -5,7 +5,9 @@ spring:
       enabled: false
     add-properties: false
   r2dbc:
-    url: r2dbc:mariadb://192.168.1.251:3306/fm3base
+    host: 192.168.1.251
+    port: 3306
+    database: fm3base
     username: dbuser
     password: 367Qh7dzNB
 
