@@ -2,6 +2,6 @@ logging:
   level:
     org.springframework.r2dbc: info
     org.springframework.web.reactive.function.client: info
-    ru.gkmirep.fm3telematicsdataservice.controllers.Fm3TelematicsDataController: info
+    ru.gkmirep.fm3telematicsdataservice.controllers.Fm3TelematicsDataController: debug
     ru.gkmirep.fm3telematicsdataservice.services.Fm3TelematicsDataService: info
     ru.gkmirep.fm3telematicsdataservice.repositories.Fm3TelematicsDataRepository: info
