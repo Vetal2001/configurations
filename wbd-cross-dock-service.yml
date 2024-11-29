@@ -16,7 +16,9 @@ spring:
       password: cWlp40To
       database: maBase
   r2dbc:
-    url: r2dbc:mariadb://192.168.1.251:3306/extm1base
+    host: 192.168.1.251
+    port: 3306
+    database: extm1base
     username: dbuser
     password: 367Qh7dzNB
 
