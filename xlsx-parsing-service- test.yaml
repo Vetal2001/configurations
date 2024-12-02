@@ -2,7 +2,9 @@ debug: false
 
 logging:
   level:
-    ru.gkmirep.xlsxparsingservice.services.XLSXLoadingService: debug
+    ru.gkmirep.xlsxparsingservice.controllers.XLSXParsingController: info
+    ru.gkmirep.xlsxparsingservice.services.WbdShptParsingService: debug
+    # ru.gkmirep.xlsxparsingservice.services.PepsicoTMSXLSXParsingService: debug
     
 # xlsx:
 #   upload-path: ./upload
