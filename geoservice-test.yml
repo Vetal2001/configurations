@@ -21,6 +21,12 @@ eureka:
 
 debug: false
 
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: refresh
 #server:
 #  port: 8091
 
