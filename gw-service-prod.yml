@@ -12,7 +12,7 @@ spring:
             response-timeout: 2000000
             connect-timeout: 200000
         - id: pepsico-tms-service
-          uri: http://localhost:8090
+          uri: lb://pepsico-tms
           predicates:
             - Path=/pepsico/**
           filters:
