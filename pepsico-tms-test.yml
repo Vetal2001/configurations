@@ -21,8 +21,13 @@ eureka:
 
 debug: false
 
-server:
-  port: 8090
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: refresh
+
 
 mirep:
   paths:
