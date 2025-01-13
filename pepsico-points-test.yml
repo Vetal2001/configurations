@@ -21,6 +21,13 @@ eureka:
 
 debug: false
 
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: refresh
+
 mirep:
   paths:
     reports: ./reports
