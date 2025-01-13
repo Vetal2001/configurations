@@ -16,7 +16,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.1.41:9999/eureka/
-    enabled: false
   instance:
     prefer-ip-address: true
 
@@ -34,8 +33,6 @@ mirep:
   services-url:
     dadata-geocoding: https://cleaner.dadata.ru/api/v1/clean/address
     dadata-reverse-geocoding: http://suggestions.dadata.ru/suggestions/api/4_1/rs
-#    xlsx-parsing-service: http://127.0.0.1:9091/v1/pepsico
-#    xlsx-parsing-service: http://192.168.1.41:9091/v1
 logging:
   level:
     org.springframework.data.mongodb: info
