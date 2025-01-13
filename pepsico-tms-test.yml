@@ -33,9 +33,9 @@ mirep:
   paths:
     reports: ./reports
   services-url:
-    xlsx-parsing-service: http://xlsx-parsing-service:9091/v1/pepsico
+    xlsx-parsing-service: http://xlsx-parsing-service/v1/pepsico
     geo-service: http://geoservice/v1
-    pepsico-point-service: http://127.0.0.1:8092/v1/pepsico/point/dto/location
+    pepsico-point-service: http://pepsico-points/v1/pepsico/point/dto/location
 logging:
   level:
     org.springframework.data.mongodb: info
