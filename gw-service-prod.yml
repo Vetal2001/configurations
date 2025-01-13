@@ -9,9 +9,18 @@ spring:
           filters:
             - RewritePath=/trips/?(?<segment>.*),/$\{segment}
           metadata:
-            response-timeout: 20000000
+            response-timeout: 2000000
             connect-timeout: 200000
-
+        - id: pepsico-tms-service
+          uri: http://localhost:8090
+          predicates:
+            - Path=/pepsico/**
+          filters:
+            - RewritePath=/pepsico/?(?<segment>.*),/$\{segment}
+          metadata:
+            response-timeout: 2000000
+            connect-timeout: 200000
+            
 management:
   endpoints:
     enabled-by-default: true
