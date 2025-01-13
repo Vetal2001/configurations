@@ -1,0 +1,46 @@
+spring:
+  devtools:
+    livereload:
+      port: 0
+  threads:
+    virtual:
+      enabled: true
+  data:
+    mongodb:
+      host: 192.168.1.41
+      port: 27017
+      username: mirep
+      password: cWlp40To
+      database: maBase
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+    enabled: false
+  instance:
+    prefer-ip-address: true
+
+debug: false
+
+server:
+  port: 8090
+
+mirep:
+  paths:
+    reports: ./reports
+  services-url:
+    xlsx-parsing-service: http://127.0.0.1:9091/v1/pepsico
+    geo-service: http://127.0.0.1:8091/v1
+    pepsico-point-service: http://127.0.0.1:8092/v1/pepsico/point/dto/location
+#    xlsx-parsing-service: http://192.168.1.41:9091/v1
+logging:
+  level:
+    org.springframework.data.mongodb: info
+    org.springframework.web.reactive.function.client: info
+    ru.gkmirep.core.utils.ExUtils: debug
+    ru.gkmirep.pepsico_tms.services.https_services.PepsicoPointService: debug
+    ru.gkmirep.pepsico_tms.mappers.PepsicoTripMapperService: debug
+    ru.gkmirep.pepsico_tms.services.trips.PepsicoTripService: debug
+    ru.gkmirep.pepsico_tms.services.trips.PepsicoMonitoringTripsService: debug
+  file:
+    name: logs\pepsico-tms.log
