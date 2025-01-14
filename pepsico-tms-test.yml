@@ -45,5 +45,6 @@ logging:
     ru.gkmirep.pepsico_tms.mappers.PepsicoTripMapperService: debug
     ru.gkmirep.pepsico_tms.services.trips.PepsicoTripService: debug
     ru.gkmirep.pepsico_tms.services.trips.PepsicoMonitoringTripsService: debug
+    ru.gkmirep.pepsico_tms.controllers.PepsicoMonitoringTripsController: debug
   file:
     name: logs\pepsico-tms.log
