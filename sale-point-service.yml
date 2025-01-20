@@ -43,6 +43,7 @@ mirep:
   services-url:
     fm3-geozone-service: http://fm3-geozone-service/v1
     cross-dock-service: http://wbd-cross-dock-service/v1
+    xlsx-parsing-service: http://127.0.0.1:9091/v1
 
 logging:
   # level:
