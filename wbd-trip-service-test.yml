@@ -10,7 +10,7 @@ logging:
   level:
     org.springframework.r2dbc: info
     org.springframework.data.mongodb: info
-    org.springframework.web.reactive.function.client: trace
+    org.springframework.web.reactive.function.client: info
     ru.gkmirep.tripservice.controllers.TripController: debug
     ru.gkmirep.tripservice.controllers.TripsMonitoringReportController: debug
     ru.gkmirep.tripservice.mappers.trip.TripMapperService: debug
@@ -27,5 +27,5 @@ logging:
     ru.gkmirep.tripservice.services.trip.WbdTempReportService: info
     ru.gkmirep.tripservice.services.http_services.XlsxParsingService: info
     ru.gkmirep.tripservice.services.XlsxReportService: debug
-    ru.gkmirep.core.utils.ExUtils: debug
+    ru.gkmirep.core.utils.ExUtils: info
 
