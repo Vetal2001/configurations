@@ -15,7 +15,7 @@ logging:
     ru.gkmirep.tripservice.controllers.TripsMonitoringReportController: debug
     ru.gkmirep.tripservice.mappers.trip.TripMapperService: debug
     ru.gkmirep.tripservice.services.http_services.Fm3ObjectService: info
-    ru.gkmirep.tripservice.services.http_services.SalePointService: trace
+    ru.gkmirep.tripservice.services.http_services.SalePointService: info
     ru.gkmirep.tripservice.services.http_services.CrossDockService: info
     ru.gkmirep.tripservice.services.http_services.Fm3TelematicsDataService: info
     ru.gkmirep.tripservice.services.rdbc.TripServiceRDBC: info
