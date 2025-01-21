@@ -59,7 +59,7 @@ logging:
   level:
   #   org.springframework.r2dbc: info
   #   org.springframework.data.mongodb: info
-    org.springframework.web.reactive.function.client: trace
+    # org.springframework.web.reactive.function.client: trace
   #   ru.gkmirep.tripservice.controllers.TripController: debug
   #   ru.gkmirep.tripservice.controllers.TripsMonitoringReportController: debug
   #   ru.gkmirep.tripservice.mappers.trip.TripMapperService: debug
