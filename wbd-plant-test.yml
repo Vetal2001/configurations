@@ -36,5 +36,6 @@ logging:
   level:
     org.springframework.web.reactive.function.client: trace
     org.springframework.data.mongodb: info
+    ru.gkmirep.wbd_plant.controllers.WbdPlantController: debug
   file:
     name: logs/wbd-plant.log
