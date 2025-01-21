@@ -34,8 +34,8 @@ mirep:
 
 logging:
   level:
-    org.springframework.web.reactive.function.client: trace
+    org.springframework.web.reactive.function.client: info
     org.springframework.data.mongodb: info
-    ru.gkmirep.wbd_plant.controllers.WbdPlantController: debug
+    ru.gkmirep.wbd_plant.controllers.WbdPlantController: info
   file:
     name: logs/wbd-plant.log
