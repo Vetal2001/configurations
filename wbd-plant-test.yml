@@ -1,0 +1,34 @@
+spring:
+  devtools:
+    livereload:
+      port: 0
+    add-properties: false
+  data:
+    mongodb:
+      host: 192.168.1.41
+      port: 27017
+      username: mirep
+      password: cWlp40To
+      database: maBase
+
+debug: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+    enabled: false
+
+server:
+  port: 8094
+
+mirep:
+  services-url:
+    xlsx-parsing-service: http://xlsx-parsing-service/v1
+
+logging:
+  level:
+    org.springframework.web.reactive.function.client: trace
+    org.springframework.data.mongodb: info
+  file:
+    name: logs/wbd-plant.log
