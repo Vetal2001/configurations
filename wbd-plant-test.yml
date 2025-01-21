@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: wbd-plant-service
   devtools:
     livereload:
       port: 0
