@@ -27,3 +27,5 @@ logging:
     ru.gkmirep.tripservice.services.trip.WbdTempReportService: info
     ru.gkmirep.tripservice.services.http_services.XlsxParsingService: info
     ru.gkmirep.tripservice.services.XlsxReportService: debug
+    ru.gkmirep.core.utils.ExUtils: debug
+
