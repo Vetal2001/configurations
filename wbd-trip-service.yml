@@ -55,7 +55,7 @@ mirep:
     fm3-object-service: http://fm3-object-service/v1
     fm3-telematics-data-service: http://fm3-telematics-data-service/v1
     xlsx-parsing-service: http://xlsx-parsing-service/v1
-    wbd-plant-service: http://wbd-plant/v1
+    wbd-plant-service: http://wbd-plant-service/v1
 logging:
   level:
   #   org.springframework.r2dbc: info
