@@ -21,6 +21,14 @@ eureka:
 
 debug: false
 
+kafka:
+  hosts: 192.168.1.41:9092
+  consumer-group: pepsico-tms-consumer
+  topics:
+    object-topic: object-create-event-topic
+  trusted: ru.gkmirep.core.dtos.pepsico_point
+
+
 management:
   endpoints:
     enabled-by-default: true
@@ -36,6 +44,7 @@ mirep:
     xlsx-parsing-service: http://xlsx-parsing-service/v1/pepsico
     geo-service: http://geoservice/v1
     pepsico-point-service: http://pepsico-points/v1/pepsico/point/dto/location
+    object-service: lb://object-sercie/v1
 logging:
   level:
     org.springframework.data.mongodb: info
