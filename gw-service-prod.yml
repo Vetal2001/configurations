@@ -30,7 +30,7 @@ spring:
             response-timeout: 200000
             connect-timeout: 200000
         - id: pepsico-points
-          uri: http://pepsico-points
+          uri: lb://pepsico-points
           predicates:
             - Path=/pepsico-point/**
           filters:
