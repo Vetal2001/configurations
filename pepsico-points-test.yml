@@ -40,4 +40,4 @@ logging:
     ru.gkmirep.core.utils.ExUtils: debug
     ru.gkmirep.pepsico_points.controllers.PepsicoPointLocationDtoController: debug
   file:
-    name: logs\pepsico-points.log
+    name: logs/pepsico-points.log
