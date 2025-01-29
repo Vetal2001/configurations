@@ -44,7 +44,7 @@ mirep:
   services-url:
     xlsx-parsing-service: http://xlsx-parsing-service/v1/pepsico
     geo-service: http://geoservice/v1
-    pepsico-point-service: http://pepsico-points/v1/pepsico/point/dto/location
+    pepsico-point-service: lb://pepsico-points/v1/pepsico/point/dto/location
     object-service: lb://object-sercie/v1
 logging:
   level:
