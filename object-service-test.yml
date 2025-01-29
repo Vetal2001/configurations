@@ -39,6 +39,13 @@ mirep:
   services-url:
     xlsx-parsing-service: http://xlsx-parsing-service/v1
 
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: refresh
+
 logging:
   level:
     org.springframework.web.reactive.function.client: trace
