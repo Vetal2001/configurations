@@ -20,6 +20,25 @@ spring:
           metadata:
             response-timeout: 2000000
             connect-timeout: 200000
+          - id: object-service
+          uri: lb://object-service
+          predicates:
+            - Path=/objects/**
+          filters:
+            - RewritePath=/objects/?(?<segment>.*),/$\{segment}
+          metadata:
+            response-timeout: 200000
+            connect-timeout: 200000
+        - id: pepsico-points
+          uri: http://pepsico-points
+          predicates:
+            - Path=/pepsico-point/**
+          filters:
+            - RewritePath=/pepsico-point/?(?<segment>.*),/$\{segment}
+          metadata:
+            response-timeout: 200000
+            connect-timeout: 200000
+
             
 management:
   endpoints:
