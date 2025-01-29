@@ -48,11 +48,11 @@ management:
 
 logging:
   level:
-    org.springframework.web.reactive.function.client: trace
+    org.springframework.web.reactive.function.client: info
     org.springframework.data.mongodb: info
-    ru.gkmirep.object_service.controllers.ObjectGroupController: debug
-    ru.gkmirep.object_service.controllers.ObjectController: trace
-    ru.gkmirep.object_service.services.object.ObjectService: trace
+    ru.gkmirep.object_service.controllers.ObjectGroupController: info
+    ru.gkmirep.object_service.controllers.ObjectController: info
+    ru.gkmirep.object_service.services.object.ObjectService: info
   file:
     name: logs/object-service.log
 
