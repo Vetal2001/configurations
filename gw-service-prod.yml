@@ -20,7 +20,7 @@ spring:
           metadata:
             response-timeout: 2000000
             connect-timeout: 200000
-          - id: object-service
+        - id: object-service
           uri: lb://object-service
           predicates:
             - Path=/objects/**
