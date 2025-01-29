@@ -51,7 +51,7 @@ logging:
     org.springframework.data.mongodb: info
     org.springframework.web.reactive.function.client: info
     ru.gkmirep.core.utils.ExUtils: debug
-    ru.gkmirep.pepsico_tms.services.https_services.PepsicoPointService: debug
+    ru.gkmirep.pepsico_tms.services.https_services.PepsicoPointService: trace
     ru.gkmirep.pepsico_tms.mappers.PepsicoTripMapperService: debug
     ru.gkmirep.pepsico_tms.services.trips.PepsicoTripService: debug
     ru.gkmirep.pepsico_tms.services.trips.PepsicoMonitoringTripsService: debug
