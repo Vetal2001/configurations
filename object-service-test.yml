@@ -1,0 +1,51 @@
+spring:
+  devtools:
+    livereload:
+      port: 0
+    add-properties: false
+  data:
+    mongodb:
+      host: 192.168.1.41
+      port: 27017
+      username: mirep
+      password: cWlp40To
+      database: maBase
+  r2dbc:
+    host: 192.168.1.251
+    port: 3306
+    database: extm1base
+    username: dbuser
+    password: 367Qh7dzNB
+
+
+debug: false
+
+kafka:
+  hosts: 192.168.1.41:9092
+  consumer-group: pepsico-tms-consumer
+  topics:
+    object-topic: object-create-event-topic
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+
+
+mirep:
+  services-url:
+    xlsx-parsing-service: http://xlsx-parsing-service/v1
+
+logging:
+  level:
+    org.springframework.web.reactive.function.client: trace
+    org.springframework.data.mongodb: info
+    ru.gkmirep.object_service.controllers.ObjectGroupController: debug
+    ru.gkmirep.object_service.controllers.ObjectController: trace
+    ru.gkmirep.object_service.services.object.ObjectService: trace
+  file:
+    name: logs/object-service.log
+
+
