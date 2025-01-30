@@ -4,6 +4,7 @@ debug: false
 #   port: 8088
   
 mirep:
+  key: 10601ddaf98891270d42b937053b7249c2dfdb1695462a18dbc77637bd4c941d
   # paths:
   #   reports: ./reports
 logging:
