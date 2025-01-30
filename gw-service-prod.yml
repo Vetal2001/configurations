@@ -2,6 +2,15 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: auth-service
+          uri: lb://wbd-trip-service
+          predicates:
+            - Path=/auth/**
+          filters:
+            - RewritePath=/auth/?(?<segment>.*),/$\{segment}
+          metadata:
+            response-timeout: 2000000
+            connect-timeout: 200000
         - id: wbd-trip-service
           uri: lb://wbd-trip-service
           predicates:
