@@ -1,0 +1,52 @@
+spring:
+  devtools:
+    livereload:
+      port: 0
+    add-properties: false
+  data:
+    mongodb:
+      host: 192.168.1.41
+      port: 27017
+      username: mirep
+      password: cWlp40To
+      database: maBase
+
+debug: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+  instance:
+    prefer-ip-address: true
+    
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: refresh
+
+
+mirep:
+  services-url:
+    xlsx-parsing-service: http://xlsx-parsing-service/v1
+
+logging:
+  level:
+    org.springframework.web.reactive.function.client: info
+    org.springframework.data.mongodb: info
+    ru.gkmirep.raw_milk_supplier.controllers.RMSupplierController: debug
+  file:
+    name: logs/raw-milk-supplier.log
+
+
+kafka:
+  hosts: 192.168.1.41:9092
+  consumer:
+    group: raw-milk-supplier-consumer
+    trusted: ru.gkmirep.core.dtos.raw_milk_supplier
+  topics:
+    create: raw-milk-supplier-create-event-topic
+    change: raw-milk-supplier-change-event-topic
+    delete: raw-milk-supplier-delete-event-topic
