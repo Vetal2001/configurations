@@ -37,8 +37,8 @@ logging:
     org.springframework.web.reactive.function.client: info
     org.springframework.data.mongodb: info
     ru.gkmirep.raw_milk_supplier.controllers.RMSupplierController: debug
-    ru.gkmirep.raw_milk_supplier.mappers.RMSupplierMappingService: debug
-    ru.gkmirep.raw_milk_supplier.services.RMSupplierService: trace
+    ru.gkmirep.raw_milk_supplier.mappers.RMSupplierMappingService: info
+    ru.gkmirep.raw_milk_supplier.services.RMSupplierService: info
   file:
     name: logs/raw-milk-supplier.log
 
