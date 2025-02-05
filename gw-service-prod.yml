@@ -47,7 +47,24 @@ spring:
           metadata:
             response-timeout: 200000
             connect-timeout: 200000
-
+        - id: plants
+          uri: lb://wbd-plant-service
+          predicates:
+            - Path=/plants/**
+          filters:
+            - RewritePath=/plants/?(?<segment>.*),/$\{segment}
+          metadata:
+            response-timeout: 20000
+            connect-timeout: 20000
+        - id: rm-supplier
+          uri: lb://raw-milk-supplier
+          predicates:
+            - Path=/rm-supplier/**
+          filters:
+            - RewritePath=/rm-supplier/?(?<segment>.*),/$\{segment}
+          metadata:
+            response-timeout: 20000
+            connect-timeout: 20000
             
 management:
   endpoints:
