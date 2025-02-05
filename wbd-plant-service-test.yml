@@ -39,3 +39,15 @@ logging:
     ru.gkmirep.wbd_plant.controllers.WbdPlantController: info
   file:
     name: logs/wbd-plant.log
+
+kafka:
+  hosts: 192.168.1.41:9092
+  consumer:
+    group: wbd-plant-consumer
+    trusted: ru.gkmirep.core.dtos.wbd_plant
+  topics:
+    wbd-plant-create: wbd-plant-create-event-topic
+    wbd-plant-change: wbd-plant-change-event-topic
+    wbd-plant-delete: wbd-plant-delete-event-topic
+
+
