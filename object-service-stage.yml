@@ -36,6 +36,19 @@ eureka:
     prefer-ip-address: true
 
 mirep:
+  debug:
+    record-raw-data: false
+  route:
+    point-limit: 30000
+    expire-timeout: 48
+  move-state:
+    min-speed: 5
+    min-dist: 100
+    ign-analyze: true
+  validate-object:
+    max-speed: 300
+    max-dist: 10000
+    min-sat-count: 4
   services-url:
     xlsx-parsing-service: http://xlsx-parsing-service/v1
 
@@ -47,12 +60,22 @@ management:
         include: refresh
 
 logging:
-  level:
+  level:    
+    org.springframework.r2dbc: info
     org.springframework.web.reactive.function.client: info
     org.springframework.data.mongodb: info
     ru.gkmirep.object_service.controllers.ObjectGroupController: info
     ru.gkmirep.object_service.controllers.ObjectController: info
-    ru.gkmirep.object_service.services.object.ObjectService: info
+    ru.gkmirep.object_service.controllers.TelematicsDataController: debug
+    ru.gkmirep.object_service.mappers.ObjectMapperService: info
+    ru.gkmirep.object_service.kafka.TelematicsDataKafkaConsumerService: debug
+    ru.gkmirep.object_service.kafka.ObjectKafkaConsumerService: debug
+    ru.gkmirep.object_service.kafka.producers.ProcessedTelematicsDataKafkaProducerService: info
+    ru.gkmirep.object_service.services.object.ObjectService: debug
+    ru.gkmirep.object_service.services.processing.ObjectProcessingService: info
+    ru.gkmirep.object_service.services.sql.TelematicsDataMemSqlQueryService: debug
+    ru.gkmirep.object_service.services.sql.ObjectMemorySQLQueryService: debug
+    ru.gkmirep.object_service.listeners.TelematicsDataEventListenerService: info
   file:
     name: logs/object-service.log
 
