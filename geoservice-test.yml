@@ -32,11 +32,13 @@ management:
 
 mirep:
   api-keys:
+    ya-routing-key: 6696e47a-f4c1-4952-a787-74aa9d6c074f
     dadata-key: 114a85ebdd1df1be9fb1a6670e06e834cab468d0
     secret-key: 1e7dfc2798fd8aa424ca60d9ce3ba64d1c6ac9d2
   paths:
     reports: ./reports
   services-url:
+    ya-routing": https://api.routing.yandex.net/v2
     dadata-geocoding: https://cleaner.dadata.ru/api/v1/clean/address
     dadata-reverse-geocoding: http://suggestions.dadata.ru/suggestions/api/4_1/rs
 logging:
@@ -45,5 +47,7 @@ logging:
     org.springframework.web.reactive.function.client: info
     ru.gkmirep.core.utils.ExUtils: info
     ru.gkmirep.geoservice.controllers.ReverseGeoCodingController: debug
+    ru.gkmirep.geoservice.services.YandexRoutingService: debug
+    ru.gkmirep.geoservice.controllers.ru.gkmirep.geoservice.controllers.RouteController: info
   file:
     name: logs\geoservice.log
