@@ -56,7 +56,7 @@ mirep:
     xlsx-parsing-service: lb://xlsx-parsing-service/v1/pepsico
     geo-service: lb://geoservice/v1
     pepsico-point-service: lb://pepsico-points/v1/pepsico/point/dto/location
-    object-service: lb://object-sercie/v1
+    object-service: lb://object-service/v1
 logging:
   level:
     org.springframework.data.mongodb: info
