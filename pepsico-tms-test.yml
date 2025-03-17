@@ -6,12 +6,19 @@ spring:
     virtual:
       enabled: true
   data:
+    redis:
+      host: 192.168.1.41
+      port: 6379
+      command-timeout: 1000 #ms
     mongodb:
       host: 192.168.1.41
       port: 27017
       username: mirep
       password: cWlp40To
       database: maBase
+
+
+
 eureka:
   client:
     service-url:
@@ -26,7 +33,7 @@ kafka:
   consumer-group: pepsico-tms-consumer
   topics:
     object-topic: object-create-event-topic
-  trusted: ru.gkmirep.core.dtos.pepsico_point
+  trusted: '*'
 
 
 management:
@@ -38,12 +45,16 @@ management:
 
 
 mirep:
+  route:
+    request-interval: 30
+  debug:
+    record-raw-ptd: false
   companyId: 6792600a234f205704c0a076
   paths:
     reports: ./reports
   services-url:
-    xlsx-parsing-service: http://xlsx-parsing-service/v1/pepsico
-    geo-service: http://geoservice/v1
+    xlsx-parsing-service: lb://xlsx-parsing-service/v1/pepsico
+    geo-service: lb://geoservice/v1
     pepsico-point-service: lb://pepsico-points/v1/pepsico/point/dto/location
     object-service: lb://object-sercie/v1
 logging:
@@ -51,10 +62,17 @@ logging:
     org.springframework.data.mongodb: info
     org.springframework.web.reactive.function.client: info
     ru.gkmirep.core.utils.ExUtils: debug
-    ru.gkmirep.pepsico_tms.services.https_services.PepsicoPointService: trace
-    ru.gkmirep.pepsico_tms.mappers.PepsicoTripMapperService: debug
-    ru.gkmirep.pepsico_tms.services.trips.PepsicoTripService: debug
-    ru.gkmirep.pepsico_tms.services.trips.PepsicoMonitoringTripsService: debug
     ru.gkmirep.pepsico_tms.controllers.PepsicoMonitoringTripsController: debug
+    ru.gkmirep.pepsico_tms.mappers.PepsicoTripMapperService: info
+    ru.gkmirep.pepsico_tms.dtos.monitoring_trip.VehicleState: info
+    ru.gkmirep.pepsico_tms.kafka.ObjectKafkaProducerService: info
+    ru.gkmirep.pepsico_tms.kafka.PepsicoPointKafkaConsumerService: info
+    ru.gkmirep.pepsico_tms.kafka.TelematicsDataKafkaConsumerService: debug
+    ru.gkmirep.pepsico_tms.listeners.ProcessedTelematicsDataEventListener: debug
+    ru.gkmirep.pepsico_tms.services.https_services.PepsicoPointService: info
+    ru.gkmirep.pepsico_tms.services.redis.TripInMemoryService: info
+    ru.gkmirep.pepsico_tms.services.trips.PepsicoTripParsingService: debug
+    ru.gkmirep.pepsico_tms.services.trips.PepsicoMonitoringTripsService: trace
+    ru.gkmirep.pepsico_tms.services.trips.PepsicoTripService: info
   file:
     name: logs\pepsico-tms.log
