@@ -27,7 +27,7 @@ logging:
     ru.gkmirep.telematics_parser.services.wialon.WialonIPSParserV2_0: info
     ru.gkmirep.telematics_parser.services.wialon.WialonIPSParserV1_1: info
     ru.gkmirep.telematics_parser.services.wialon.WialonIPSParser: info
-    ru.gkmirep.telematics_parser.services.egts.EgtsParser: debug
+    ru.gkmirep.telematics_parser.services.egts.EgtsParser: trace
     ru.gkmirep.telematics_parser.kafka.TelematicsDataProducerKafkaService: info
     ru.gkmirep.telematics_parser.listeners.TelematicsDataListenerComponent: debug
   file:
