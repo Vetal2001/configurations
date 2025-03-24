@@ -38,7 +38,7 @@ mirep:
   connection-accept-timeout: 120
   sleeping-time: 1000
   thread-pool-size: 5000
-  data-waiting_time: 1800
+  data-waiting_time: 180
 
 kafka:
   hosts: 192.168.1.41:9092
