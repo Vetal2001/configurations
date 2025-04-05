@@ -34,6 +34,8 @@ cassandra:
 
 
 kafka:
+  read-all-data: false
+  max-message-size: 5242880
   hosts: 192.168.1.41:9092
   consumer-group: object-service
   topics:
@@ -52,6 +54,8 @@ eureka:
     prefer-ip-address: true
 
 mirep:
+  mem-table:
+    max-days-in-mem: 7
   debug:
     record-raw-data: false
   route:
@@ -87,10 +91,10 @@ logging:
     ru.gkmirep.object_service.kafka.TelematicsDataKafkaConsumerService: debug
     ru.gkmirep.object_service.kafka.ObjectKafkaConsumerService: debug
     ru.gkmirep.object_service.kafka.producers.ProcessedTelematicsDataKafkaProducerService: info
-    ru.gkmirep.object_service.services.object.ObjectService: debug
+    ru.gkmirep.object_service.services.object.ObjectService: info
     ru.gkmirep.object_service.services.processing.ObjectProcessingService: info
-    ru.gkmirep.object_service.services.sql.TelematicsDataMemSqlQueryService: debug
-    ru.gkmirep.object_service.services.sql.ObjectMemorySQLQueryService: debug
+    ru.gkmirep.object_service.services.sql.TelematicsDataMemSqlQueryService: info
+    ru.gkmirep.object_service.services.sql.ObjectMemorySQLQueryService: info
     ru.gkmirep.object_service.listeners.TelematicsDataEventListenerService: info
   file:
     name: logs/object-service.log
