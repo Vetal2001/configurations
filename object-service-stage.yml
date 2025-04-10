@@ -88,7 +88,7 @@ logging:
     ru.gkmirep.object_service.controllers.ObjectController: info
     ru.gkmirep.object_service.controllers.TelematicsDataController: debug
     ru.gkmirep.object_service.mappers.ObjectMapperService: info
-    ru.gkmirep.object_service.kafka.TelematicsDataKafkaConsumerService: debug
+    ru.gkmirep.object_service.kafka.TelematicsDataKafkaConsumerService: info
     ru.gkmirep.object_service.kafka.ObjectKafkaConsumerService: debug
     ru.gkmirep.object_service.kafka.producers.ProcessedTelematicsDataKafkaProducerService: info
     ru.gkmirep.object_service.services.object.ObjectService: info
