@@ -65,14 +65,18 @@ logging:
     ru.gkmirep.pepsico_tms.controllers.PepsicoMonitoringTripsController: debug
     ru.gkmirep.pepsico_tms.mappers.PepsicoTripMapperService: info
     ru.gkmirep.pepsico_tms.dtos.monitoring_trip.VehicleState: info
-    ru.gkmirep.pepsico_tms.kafka.ObjectKafkaProducerService: info
     ru.gkmirep.pepsico_tms.kafka.PepsicoPointKafkaConsumerService: info
-    ru.gkmirep.pepsico_tms.kafka.TelematicsDataKafkaConsumerService: debug
+    ru.gkmirep.pepsico_tms.kafka.TelematicsDataKafkaConsumerService: trace
+    ru.gkmirep.pepsico_tms.kafka.object.ObjectKafkaProducerService: info
+    ru.gkmirep.pepsico_tms.kafka.object.ObjectKafkaConsumerService: debug
     ru.gkmirep.pepsico_tms.listeners.ProcessedTelematicsDataEventListener: debug
-    ru.gkmirep.pepsico_tms.services.https_services.PepsicoPointService: info
-    ru.gkmirep.pepsico_tms.services.redis.TripInMemoryService: info
-    ru.gkmirep.pepsico_tms.services.trips.PepsicoTripParsingService: debug
-    ru.gkmirep.pepsico_tms.services.trips.PepsicoMonitoringTripsService: trace
-    ru.gkmirep.pepsico_tms.services.trips.PepsicoTripService: info
+    ru.gkmirep.pepsico_tms.services.https_services.PepsicoPointService: trace
+    ru.gkmirep.pepsico_tms.services.https_services.HttpObjectService: trace
+    ru.gkmirep.pepsico_tms.services.object.ObjectService: trace
+    ru.gkmirep.pepsico_tms.services.redis.TripInMemoryService: trace
+    ru.gkmirep.pepsico_tms.services.trips.TripParsingService: trace
+    ru.gkmirep.pepsico_tms.services.trips.MonitoringTripsService: trace
+    ru.gkmirep.pepsico_tms.services.trips.PepsicoTripService: trace
+    ru.gkmirep.pepsico_tms.services.trips.ProcessingTripService: trace
   file:
     name: logs\pepsico-tms.log
