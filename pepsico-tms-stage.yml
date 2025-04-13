@@ -80,3 +80,6 @@ logging:
     ru.gkmirep.pepsico_tms.services.trips.ProcessingTripService: trace
   file:
     name: logs\pepsico-tms.log
+  logback:
+    rollingpolicy:
+      max-file-size: 100MB
