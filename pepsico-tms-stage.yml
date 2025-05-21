@@ -62,7 +62,7 @@ logging:
     org.springframework.data.mongodb: info
     org.springframework.web.reactive.function.client: info
     ru.gkmirep.core.utils.ExUtils: debug
-    ru.gkmirep.pepsico_tms.controllers.PepsicoMonitoringTripsController: debug
+    ru.gkmirep.pepsico_tms.controllers.PepsicoMonitoringTripsController: trace
     ru.gkmirep.pepsico_tms.mappers.PepsicoTripMapperService: info
     ru.gkmirep.pepsico_tms.dtos.monitoring_trip.VehicleState: info
     ru.gkmirep.pepsico_tms.kafka.PepsicoPointKafkaConsumerService: info
