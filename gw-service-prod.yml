@@ -85,6 +85,16 @@ spring:
           metadata:
             response-timeout: 20000
             connect-timeout: 20000
+      #wbd-cross-dock
+        - id: wbd-cross-dock-service
+          uri: lb://wbd-cross-dock-service
+          predicates:
+            - Path=/wbd-cross-dock/**
+          filters:
+            - RewritePath=/wbd-cross-dock/?(?<segment>.*),/$\{segment}
+          metadata:
+            response-timeout: 20000
+            connect-timeout: 20000
 management:
   endpoints:
     enabled-by-default: true
