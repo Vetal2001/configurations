@@ -76,12 +76,12 @@ spring:
             response-timeout: 20000
             connect-timeout: 20000
       #wbd-sale-point
-        - id: geoservice
-          uri: lb://geoservice
+        - id: sale-point-service
+          uri: lb://sale-point-service
           predicates:
-            - Path=/geoservice/**
+            - Path=/wbd-sale-point/**
           filters:
-            - RewritePath=/geoservice/?(?<segment>.*),/$\{segment}
+            - RewritePath=/wbd-sale-point/?(?<segment>.*),/$\{segment}
           metadata:
             response-timeout: 20000
             connect-timeout: 20000
