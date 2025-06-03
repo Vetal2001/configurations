@@ -86,7 +86,7 @@ spring:
             response-timeout: 20000
             connect-timeout: 20000
       #wbd-cross-dock
-        - id: wbd-cross-dock-service
+        - id: wbd-cross-dock
           uri: lb://wbd-cross-dock-service
           predicates:
             - Path=/wbd-cross-dock/**
