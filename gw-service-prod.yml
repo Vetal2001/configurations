@@ -75,6 +75,16 @@ spring:
           metadata:
             response-timeout: 20000
             connect-timeout: 20000
+      #wbd-sale-point
+        - id: geoservice
+          uri: lb://geoservice
+          predicates:
+            - Path=/geoservice/**
+          filters:
+            - RewritePath=/geoservice/?(?<segment>.*),/$\{segment}
+          metadata:
+            response-timeout: 20000
+            connect-timeout: 20000
 management:
   endpoints:
     enabled-by-default: true
