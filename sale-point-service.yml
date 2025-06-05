@@ -41,7 +41,7 @@ management:
 
 mirep:
   paths:
-    reports: ./reports
+    reports: /reports
   services-url:
     fm3-geozone-service: http://fm3-geozone-service/v1
     cross-dock-service: http://wbd-cross-dock-service/v1
