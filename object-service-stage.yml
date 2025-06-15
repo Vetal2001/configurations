@@ -105,6 +105,7 @@ logging:
     ru.gkmirep.object_service.services.processing.ObjectProcessingService: info
     ru.gkmirep.object_service.services.sql.TelematicsDataMemSqlQueryService: info
     ru.gkmirep.object_service.services.sql.ObjectMemorySQLQueryService: info
+    ru.gkmirep.object_service.services.cassandra.TelematicsCassandraQueryService: debug
     ru.gkmirep.object_service.listeners.TelematicsDataEventListenerService: info
   file:
     name: logs/object-service.log
