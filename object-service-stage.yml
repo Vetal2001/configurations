@@ -33,16 +33,16 @@ spring:
 debug: false
 
 
-cassandra:
-  host: 192.168.1.110
-  port: 9042
-  keyspace-name: telematics
-  username: mirep
-  password: daPi-oLW4g
+# cassandra:
+#   host: 192.168.1.110
+#   port: 9042
+#   keyspace-name: telematics
+#   username: mirep
+#   password: daPi-oLW4g
 
 
 kafka:
-  read-all-data: true
+  read-all-data: false
   max-message-size: 5242880
   hosts: 192.168.1.41:9092
   consumer-group: object-service
