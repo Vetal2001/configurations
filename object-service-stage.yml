@@ -3,6 +3,14 @@ spring:
     livereload:
       port: 0
     add-properties: false
+  cassandra:
+    contact-points: 192.168.1.111,192.168.1.112,192.168.1.113
+    local-datacenter: datacenter1
+    keyspace-name: telematics
+    username: mirep
+    password: daPi-oLW4g
+    request:
+      timeout: 600s
   data:
     redis:
       host: 192.168.1.41
@@ -34,7 +42,7 @@ cassandra:
 
 
 kafka:
-  read-all-data: false
+  read-all-data: true
   max-message-size: 5242880
   hosts: 192.168.1.41:9092
   consumer-group: object-service
@@ -54,6 +62,8 @@ eureka:
     prefer-ip-address: true
 
 mirep:
+  db-settings:
+    delay-saving-in-db: 10
   mem-table:
     max-days-in-mem: 7
   debug:
