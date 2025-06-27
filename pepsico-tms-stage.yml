@@ -33,6 +33,11 @@ kafka:
   consumer-group: pepsico-tms-consumer
   topics:
     object-topic: object-create-event-topic
+    telematics-data: new-processed-data-topic
+    new-object-topic: new-object-topic
+    edit-object-topic: edit-object-topic
+    delete-object-topic: delete-object-topic
+    pepsico-point-edit-topic: pepsico-point-edit-topic
   trusted: '*'
 
 
