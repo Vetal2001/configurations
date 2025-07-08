@@ -65,6 +65,16 @@ spring:
           metadata:
             response-timeout: 20000
             connect-timeout: 20000
+    #raw-milk-tms
+        - id: rm-tms
+          uri: lb://raw-milk-tms
+          predicates:
+            - Path=/rm-tms/**
+          filters:
+            - RewritePath=/rm-tms/?(?<segment>.*),/$\{segment}
+          metadata:
+            response-timeout: 20000
+            connect-timeout: 20000
       #geoservice
         - id: geoservice
           uri: lb://geoservice
