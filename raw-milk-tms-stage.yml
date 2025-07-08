@@ -76,7 +76,7 @@ logging:
     ru.gkmirep.raw_milk_tms.service.redis.TripMemoryService: info
     ru.gkmirep.raw_milk_tms.service.TripMonitoringService: info
   file:
-    name: logs\pepsico-tms.log
+    name: logs\raw-milk-tms.log
   logback:
     rollingpolicy:
       max-file-size: 100MB
