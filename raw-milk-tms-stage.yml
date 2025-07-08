@@ -21,6 +21,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.1.41:9999/eureka/
+    refresh:
+      enable: true
   instance:
     prefer-ip-address: true
 
