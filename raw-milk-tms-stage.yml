@@ -1,1 +1,82 @@
+spring:
+  devtools:
+    livereload:
+      port: 0
+  threads:
+    virtual:
+      enabled: true
+  data:
+    redis:
+      host: 192.168.1.41
+      port: 6379
+      command-timeout: 30000 #ms
+    mongodb:
+      host: 192.168.1.41
+      port: 27017
+      username: mirep
+      password: cWlp40To
+      database: maBase
 
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+  instance:
+    prefer-ip-address: true
+
+debug: false
+
+kafka:
+  hosts: 192.168.1.41:9092
+  consumer-group: raw-milk-tms
+  topics:
+    create: ""
+    change: ""
+    delete: ""
+  trusted: '*'
+
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: refresh
+
+
+mirep:
+  route:
+    request-interval: 60
+  debug:
+    record-raw-ptd: false
+  companyId: 6792602e234f205704c0a077
+  paths:
+    reports: ./reports
+  services-url:
+    xlsx-parsing-service: lb://xlsx-parsing-service/v1/pepsico
+    geo-service: lb://geoservice/v1
+    supplier-service: lb://raw-milk-supplier/v1
+    plant-service: lb://wbd-plant-service/v1
+    object-service: lb://object-service/v1
+logging:
+  level:
+    org.springframework.web.reactive.function.client: info
+    org.springframework.data.mongodb: info
+    ru.gkmirep.raw_milk_tms.mapper.TripParsingMappingService: info
+    ru.gkmirep.raw_milk_tms.service.http_service.HttpSupplierService: info
+    ru.gkmirep.raw_milk_tms.service.http_service.HttpPlantService: info
+    ru.gkmirep.raw_milk_tms.service.http_service.HttpObjectService: info
+    ru.gkmirep.raw_milk_tms.service.mongo.TripMongoService: info
+    ru.gkmirep.raw_milk_tms.service.redis.SupplierRedisService: info
+    ru.gkmirep.raw_milk_tms.service.redis.PlantRedisService: info
+    ru.gkmirep.raw_milk_tms.service.redis.ObjectRedisService: info
+    ru.gkmirep.raw_milk_tms.service.redis.TripRedisService: info
+    ru.gkmirep.raw_milk_tms.service.redis.TripMemoryService: info
+    ru.gkmirep.raw_milk_tms.service.TripMonitoringService: info
+  file:
+    name: logs\pepsico-tms.log
+  logback:
+    rollingpolicy:
+      max-file-size: 100MB
