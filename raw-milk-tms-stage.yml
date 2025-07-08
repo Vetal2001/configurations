@@ -17,8 +17,6 @@ spring:
       password: cWlp40To
       database: maBase
 
-
-
 eureka:
   client:
     service-url:
