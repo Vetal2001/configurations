@@ -30,7 +30,8 @@ debug: false
 
 kafka:
   hosts: 192.168.1.41:9092
-  consumer-group: raw-milk-tms
+  consumer:
+    consumer-group: raw-milk-tms
   topics:
     create: ""
     change: ""
