@@ -33,6 +33,11 @@ kafka:
   consumer:
     consumer-group: raw-milk-tms
   topics:
+    wbd-plant-compact-dto-create: wbd-plant-compact-dto-create
+    wbd-plant-compact-dto-change: wbd-plant-compact-dto-change
+    wbd-plant-create: wbd-plant-create-event-topic
+    wbd-plant-change: wbd-plant-change-event-topic
+    wbd-plant-delete: wbd-plant-delete-event-topic
     create: ""
     change: ""
     delete: ""
