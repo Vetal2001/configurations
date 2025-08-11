@@ -46,6 +46,8 @@ kafka:
     group: wbd-plant-consumer
     trusted: ru.gkmirep.core.dtos.wbd_plant
   topics:
+    compact-dto-create: wbd-plant-compact-dto-create
+    compact-dto-change: wbd-plant-compact-dto-change
     wbd-plant-create: wbd-plant-create-event-topic
     wbd-plant-change: wbd-plant-change-event-topic
     wbd-plant-delete: wbd-plant-delete-event-topic
