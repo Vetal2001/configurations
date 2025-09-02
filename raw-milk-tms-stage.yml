@@ -61,6 +61,7 @@ mirep:
     supplier-service: lb://raw-milk-supplier/v1
     plant-service: lb://wbd-plant-service/v1
     object-service: lb://object-service/v1
+    geo-service: lb://geoservice/v1
     
 logging:
   level:
