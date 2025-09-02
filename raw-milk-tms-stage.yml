@@ -54,6 +54,8 @@ management:
 
 mirep:
   companyId: 6792602e234f205704c0a077
+  trip-monitoring:
+    recalculation-period: 1200
   services-url:
     xlsx-parsing-service: lb://xlsx-parsing-service/v1
     supplier-service: lb://raw-milk-supplier/v1
