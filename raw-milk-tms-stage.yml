@@ -67,6 +67,8 @@ logging:
   level:
     org.springframework.web.reactive.function.client: info
     org.springframework.data.mongodb: info
+    ru.gkmirep.raw_milk_tms.mapper.TripParsingMappingService: trace
+    ru.gkmirep.raw_milk_tms.mapper.TripMonitoringMappingService: trace
     ru.gkmirep.raw_milk_tms.kafka.PlantKafkaConsumer: trace
     ru.gkmirep.raw_milk_tms.service.http_service.HttpSupplierService: trace
     ru.gkmirep.raw_milk_tms.service.http_service.HttpPlantService: trace
