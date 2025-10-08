@@ -74,7 +74,7 @@ logging:
     ru.gkmirep.pepsico_tms.mappers.v1.PepsicoTripMapperService: info
     ru.gkmirep.pepsico_tms.dtos.v1.monitoring_trip.VehicleState: info
     ru.gkmirep.pepsico_tms.kafka.point.PepsicoPointKafkaConsumerService: trace
-    ru.gkmirep.pepsico_tms.kafka.TelematicsDataKafkaConsumerService: trace
+    ru.gkmirep.pepsico_tms.kafka.TelematicsDataKafkaConsumerService: info
     ru.gkmirep.pepsico_tms.kafka.object.ObjectKafkaProducerService: info
     ru.gkmirep.pepsico_tms.kafka.object.ObjectKafkaConsumerService: debug
     ru.gkmirep.pepsico_tms.listeners.ProcessedTelematicsDataEventListener: debug
