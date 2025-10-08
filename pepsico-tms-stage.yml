@@ -51,8 +51,10 @@ management:
 
 
 mirep:
+  trip:
+    hours-offset-to-complete: 40
   route:
-    request-interval: 60
+    request-interval: 3600
   debug:
     record-raw-ptd: false
   companyId: 6792600a234f205704c0a076
@@ -68,22 +70,30 @@ logging:
     org.springframework.data.mongodb: info
     org.springframework.web.reactive.function.client: info
     ru.gkmirep.core.utils.ExUtils: debug
-    ru.gkmirep.pepsico_tms.controllers.PepsicoMonitoringTripsController: trace
-    ru.gkmirep.pepsico_tms.mappers.PepsicoTripMapperService: info
-    ru.gkmirep.pepsico_tms.dtos.monitoring_trip.VehicleState: info
-    ru.gkmirep.pepsico_tms.kafka.PepsicoPointKafkaConsumerService: info
+    ru.gkmirep.pepsico_tms.controllers.PepsicoMonitoringTripsController: debug
+    ru.gkmirep.pepsico_tms.mappers.v1.PepsicoTripMapperService: info
+    ru.gkmirep.pepsico_tms.dtos.v1.monitoring_trip.VehicleState: info
+    ru.gkmirep.pepsico_tms.kafka.point.PepsicoPointKafkaConsumerService: trace
     ru.gkmirep.pepsico_tms.kafka.TelematicsDataKafkaConsumerService: trace
     ru.gkmirep.pepsico_tms.kafka.object.ObjectKafkaProducerService: info
     ru.gkmirep.pepsico_tms.kafka.object.ObjectKafkaConsumerService: debug
     ru.gkmirep.pepsico_tms.listeners.ProcessedTelematicsDataEventListener: debug
-    ru.gkmirep.pepsico_tms.services.https_services.PepsicoPointService: trace
-    ru.gkmirep.pepsico_tms.services.https_services.HttpObjectService: trace
-    ru.gkmirep.pepsico_tms.services.object.ObjectService: trace
-    ru.gkmirep.pepsico_tms.services.redis.TripInMemoryService: trace
-    ru.gkmirep.pepsico_tms.services.trips.TripParsingService: trace
-    ru.gkmirep.pepsico_tms.services.trips.MonitoringTripsService: trace
-    ru.gkmirep.pepsico_tms.services.trips.PepsicoTripService: trace
-    ru.gkmirep.pepsico_tms.services.trips.ProcessingTripService: trace
+    ru.gkmirep.pepsico_tms.services.v1.https_services.PepsicoPointService: trace
+    ru.gkmirep.pepsico_tms.services.v1.object.ObjectService: trace
+    ru.gkmirep.pepsico_tms.services.v1.redis.TripInMemoryService: trace
+    ru.gkmirep.pepsico_tms.services.v1.trips.TripParsingService: trace
+    ru.gkmirep.pepsico_tms.services.v1.trips.MonitoringTripsService: trace
+    ru.gkmirep.pepsico_tms.services.v1.trips.PepsicoTripService: trace
+    ru.gkmirep.pepsico_tms.services.v1.trips.ProcessingTripService: trace
+    ru.gkmirep.pepsico_tms.services.v2.http.HttpObjectService: trace
+    ru.gkmirep.pepsico_tms.services.v2.redis.PepsicoPointRedisService: trace
+    ru.gkmirep.pepsico_tms.services.v2.report.TripReportService: trace
+    ru.gkmirep.pepsico_tms.services.v2.processing.TripCalculatingServiceImpl: trace
+    ru.gkmirep.pepsico_tms.services.v2.processing.TripProcessingServiceImpl: trace
+    ru.gkmirep.pepsico_tms.services.v2.TripsParsingService: trace
+    ru.gkmirep.core.services.trips.TripMemService: trace
+    ru.gkmirep.core.services.trips.TripRedisService: trace
+    ru.gkmirep.core.services.trips.TripProcessingService: trace
   file:
     name: logs\pepsico-tms.log
   logback:
