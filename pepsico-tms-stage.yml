@@ -94,6 +94,7 @@ logging:
     ru.gkmirep.core.services.trips.TripMemService: trace
     ru.gkmirep.core.services.trips.TripRedisService: trace
     ru.gkmirep.core.services.trips.TripProcessingService: trace
+    ru.gkmirep.core.services.trips.v2.TripManageService: trace
   file:
     name: logs\pepsico-tms.log
   logback:
