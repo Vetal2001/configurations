@@ -48,7 +48,7 @@ kafka:
   hosts: 192.168.1.41:9092
   consumer:
     group: raw-milk-supplier-consumer
-    trusted: ru.gkmirep.core.dtos.raw_milk_supplier
+    trusted: "*"
   topics:
     create: raw-milk-supplier-create-event-topic
     change: raw-milk-supplier-change-event-topic
