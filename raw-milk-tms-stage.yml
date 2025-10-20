@@ -35,7 +35,7 @@ kafka:
   topics:
     wbd-plant-compact-dto-create: wbd-plant-compact-dto-create
     wbd-plant-compact-dto-change: wbd-plant-compact-dto-change
-    spl-exchange-dto: dev-supplier-exchange-dto
+    spl-exchange-dto: supplier-exchange-dto
     wbd-plant-create: wbd-plant-create-event-topic
     wbd-plant-change: wbd-plant-change-event-topic
     wbd-plant-delete: wbd-plant-delete-event-topic
