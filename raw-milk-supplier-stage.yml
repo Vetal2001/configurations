@@ -53,4 +53,4 @@ kafka:
     create: raw-milk-supplier-create-event-topic
     change: raw-milk-supplier-change-event-topic
     delete: raw-milk-supplier-delete-event-topic
-    spl-exchange-dto: dev-supplier-exchange-dto
+    spl-exchange-dto: supplier-exchange-dto
