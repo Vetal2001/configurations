@@ -69,23 +69,31 @@ mirep:
     
 logging:
   level:
-    org.springframework.web.reactive.function.client: info
+    org.springframework.web.reactive.function.client: trace
     org.springframework.data.mongodb: info
     ru.gkmirep.raw_milk_tms.mapper.TripParsingMappingService: trace
     ru.gkmirep.raw_milk_tms.mapper.TripMonitoringMappingService: trace
+    ru.gkmirep.raw_milk_tms.controller.MonitoringController: debug
     ru.gkmirep.raw_milk_tms.kafka.PlantKafkaConsumer: trace
     ru.gkmirep.raw_milk_tms.service.http_service.HttpSupplierService: trace
     ru.gkmirep.raw_milk_tms.service.http_service.HttpPlantService: trace
     ru.gkmirep.raw_milk_tms.service.http_service.HttpObjectService: trace
     ru.gkmirep.raw_milk_tms.service.mongo.TripMongoService: trace
-    ru.gkmirep.raw_milk_tms.service.redis.SupplierRedisService: trace
+    ru.gkmirep.raw_milk_tms.service.redis.ru.gkmirep.raw_milk_tms.service.suppliers.SupplierRedisService: trace
     ru.gkmirep.raw_milk_tms.service.redis.PlantRedisService: trace
-    ru.gkmirep.raw_milk_tms.service.redis.ObjectRedisService: trace
+    ru.gkmirep.raw_milk_tms.service.redis.ObjectRedisServiceImpl: trace
     ru.gkmirep.raw_milk_tms.service.redis.TripRedisService: trace
-    ru.gkmirep.raw_milk_tms.service.redis.TripMemoryService: trace
+    ru.gkmirep.raw_milk_tms.service.mem.TripMemoryService: trace
     ru.gkmirep.raw_milk_tms.service.TripMonitoringService: trace
     ru.gkmirep.raw_milk_tms.service.TripProcessingService: trace
-    ru.gkmirep.raw_milk_tms.service.TripService: trace
+    ru.gkmirep.raw_milk_tms.service.mongo.TripMongoServiceImpl: trace
+    ru.gkmirep.raw_milk_tms.service.processing.TripCalculatingServiceImpl: trace
+    ru.gkmirep.raw_milk_tms.service.processing.TripProcessingServiceImpl: trace
+    #core
+    ru.gkmirep.core.services.trips.TripCalculatingService: trace
+    ru.gkmirep.core.services.trips.v2.TripManageService: trace
+    ru.gkmirep.core.services.trips.TripProcessingService: trace
+    ru.gkmirep.core.services.trips.TripRedisService: trace
   file:
     name: logs\raw-milk-tms.log
   logback:
