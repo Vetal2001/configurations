@@ -59,7 +59,7 @@ mirep:
     offset-before: 20
     offset-after: 30
   trip-monitoring:
-    recalculation-period: 1200
+    recalculation-period: 1800
   services-url:
     xlsx-parsing-service: lb://xlsx-parsing-service/v1
     supplier-service: lb://raw-milk-supplier/v1
