@@ -49,8 +49,8 @@ logging:
     org.springframework.web.reactive.function.client: info
     ru.gkmirep.core.utils.ExUtils: info
     ru.gkmirep.geoservice.controllers.ReverseGeoCodingController: debug
-    ru.gkmirep.geoservice.services.YandexRoutingService: debug
+    ru.gkmirep.geoservice.services.YandexRoutingService: trace
     ru.gkmirep.geoservice.services.YaGeocodingService: trace
-    ru.gkmirep.geoservice.controllers.ru.gkmirep.geoservice.controllers.RouteController: info
+    ru.gkmirep.geoservice.controllers.RouteController: info
   file:
     name: logs\geoservice.log
