@@ -30,8 +30,8 @@ management:
 
 mirep:
   services-url:
-    xlsx-parsing-service: http://xlsx-parsing-service/v1
-
+    xlsx-parsing-service: lb://xlsx-parsing-service/v1
+    geo-service: lb://geoservice/v1
 logging:
   level:
     org.springframework.web.reactive.function.client: info
