@@ -39,6 +39,7 @@ kafka:
     wbd-plant-create: wbd-plant-create-event-topic
     wbd-plant-change: wbd-plant-change-event-topic
     wbd-plant-delete: wbd-plant-delete-event-topic
+    telematics-data: new-processed-data-topic
     create: ""
     change: ""
     delete: ""
