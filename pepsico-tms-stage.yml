@@ -54,7 +54,7 @@ mirep:
   trip:
     hours-offset-to-complete: 40
   route:
-    request-interval: 3600
+    request-interval: 7200
   debug:
     record-raw-ptd: false
   companyId: 6792600a234f205704c0a076
