@@ -35,9 +35,13 @@ logging:
 
 mirep:
   listening-port: 2026
+  #время ожидания подключения к серверу (сек)
   connection-accept-timeout: 120
+  #таймаут между опросами сокета, если сокет пустой (мс)
   sleeping-time: 5000
+  # размер пула потоков
   thread-pool-size: 10000
+  # время ожидания данных в сокете (сек)
   data-waiting_time: 610
 
 kafka:
