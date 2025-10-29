@@ -36,7 +36,7 @@ logging:
 mirep:
   listening-port: 2026
   connection-accept-timeout: 120
-  sleeping-time: 1000
+  sleeping-time: 5000
   thread-pool-size: 10000
   data-waiting_time: 610
 
