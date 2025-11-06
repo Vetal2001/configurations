@@ -52,7 +52,7 @@ kafka:
     object-new-topic: new-object-topic
     object-delete-topic: delete-object-topic
     new-processed-data: new-processed-data-topic
-  trusted: 'ru.gkmirep.core.telematics, ru.gkmirep.core.dtos.objects.object'
+  trusted: '*'
 
 eureka:
   client:
