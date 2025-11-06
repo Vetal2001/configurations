@@ -48,7 +48,7 @@ mirep:
 logging:
   level:
     org.springframework.data.mongodb: info
-    org.springframework.web.reactive.function.client: info
+    org.springframework.web.reactive.function.client: trace
     ru.gkmirep.core.utils.ExUtils: debug
     ru.gkmirep.pepsico_points.controllers.PepsicoPointLocationDtoController: debug
   file:
