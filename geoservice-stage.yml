@@ -49,6 +49,7 @@ logging:
     org.springframework.web.reactive.function.client: info
     ru.gkmirep.core.utils.ExUtils: info
     ru.gkmirep.geoservice.controllers.ReverseGeoCodingController: debug
+    ru.gkmirep.geoservice.controllers.GeoCodingController: info
     ru.gkmirep.geoservice.services.YandexRoutingService: trace
     ru.gkmirep.geoservice.services.YaGeocodingService: trace
     ru.gkmirep.geoservice.controllers.RouteController: info
