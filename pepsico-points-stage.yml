@@ -44,7 +44,7 @@ mirep:
   paths:
     reports: ./reports
   services-url:
-    geo-service: http://geoservice/v1/geocoding
+    geo-service: lb://geoservice/v1
 logging:
   level:
     org.springframework.data.mongodb: info
