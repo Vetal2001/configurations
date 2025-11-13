@@ -58,7 +58,7 @@ mirep:
   companyId: 6792602e234f205704c0a077
   paths:
     reports: ./reports
-    upload: ./uploads
+    upload: ./shpt
   trip-calculating:
     offset-before: 20
     offset-after: 30
