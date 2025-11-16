@@ -100,7 +100,7 @@ logging:
     ru.gkmirep.core.services.trips.TripRedisService: trace
     ru.gkmirep.core.services.HttpGeoService: trace
   file:
-    name: logs\raw-milk-tms.log
-  logback:
-    rollingpolicy:
-      max-file-size: 100MB
+    name: logs/raw-milk-tms.log
+  # logback:
+  #   rollingpolicy:
+  #     max-file-size: 100MB
