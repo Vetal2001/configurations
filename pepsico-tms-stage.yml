@@ -92,10 +92,10 @@ logging:
     ru.gkmirep.pepsico_tms.services.v2.processing.TripCalculatingServiceImpl: trace
     ru.gkmirep.pepsico_tms.services.v2.processing.TripProcessingServiceImpl: trace
     ru.gkmirep.pepsico_tms.services.v2.TripsParsingService: trace
-    ru.gkmirep.core.services.trips.TripMemService: trace
-    ru.gkmirep.core.services.trips.TripRedisService: trace
-    ru.gkmirep.core.services.trips.TripProcessingService: trace
-    ru.gkmirep.core.services.trips.v2.TripManageService: trace
+    ru.gkmirep.trip_lib.services.TripMemService: trace
+    ru.gkmirep.trip_lib.services.TripRedisService: trace
+    ru.gkmirep.trip_lib.services.TripProcessingService: trace
+    ru.gkmirep.trip_lib.services.TripManageService: trace
   file:
     name: logs/pepsico-tms.log
   # logback:
