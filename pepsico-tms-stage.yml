@@ -97,6 +97,7 @@ logging:
     ru.gkmirep.trip_lib.services.TripRedisService: trace
     ru.gkmirep.trip_lib.services.TripProcessingService: trace
     ru.gkmirep.trip_lib.services.TripManageService: trace
+    ru.gkmirep.trip_lib.services.TripMongoService: trace
   file:
     name: logs/pepsico-tms.log
   # logback:
