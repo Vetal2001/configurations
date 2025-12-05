@@ -68,7 +68,7 @@ mirep:
     object-service: lb://object-service/v1
 logging:
   level:
-    org.springframework.data.mongodb: info
+    org.springframework.data.mongodb: trace
     org.springframework.web.reactive.function.client: info
     ru.gkmirep.core.utils.ExUtils: debug
     ru.gkmirep.pepsico_tms.controllers.PepsicoMonitoringTripsController: debug
