@@ -37,7 +37,7 @@ clickhouse:
   port: 8123
   username: default
   password: nqRSRCPi
-  database: dev_telematics
+  database: mirep
   telematics-table: raw_telematics
   max-connections: 1000
 
