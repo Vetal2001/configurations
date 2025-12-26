@@ -3,14 +3,6 @@ spring:
     livereload:
       port: 0
     add-properties: false
-  # cassandra:
-  #   contact-points: 192.168.1.111,192.168.1.112,192.168.1.113
-  #   local-datacenter: datacenter1
-  #   keyspace-name: telematics
-  #   username: mirep
-  #   password: daPi-oLW4g
-  #   request:
-  #     timeout: 600s
   data:
     redis:
       host: 192.168.1.41
@@ -28,7 +20,6 @@ spring:
     database: extm1base
     username: dbuser
     password: 367Qh7dzNB
-
 
 debug: false
 
@@ -54,14 +45,6 @@ cassandra:
   templates:
     keyspace: mirep
     telematics-table: all_telematics
-
-
-# cassandra:
-#   host: 192.168.1.110
-#   port: 9042
-#   keyspace-name: telematics
-#   username: mirep
-#   password: daPi-oLW4g
 
 
 kafka:
