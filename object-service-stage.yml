@@ -76,6 +76,7 @@ mirep:
     # Архив какой глубины отправлять в кафка (часы).
     # Данные ранее этого периода не будут отправлены в кафка для остальных сервисов
     beginning-archive-to-kafka: 72
+    need-send-to-kafka: false
   db-settings:
     delay-saving-in-db: 10
   mem-table:
