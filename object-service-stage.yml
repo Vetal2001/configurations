@@ -51,11 +51,11 @@ kafka:
   read-all-data: true
   max-message-size: 5242880
   hosts: 192.168.1.41:9092
-  consumer-group: object-service-5
+  consumer-group: object-service-6
   telematics:
     max-processed-queue: 700000
   consumers:
-    telematics-consumer: telematics-consumer-5
+    telematics-consumer: telematics-consumer-7
   topics:
     object-topic: object-create-event-topic
     object-edit-topic: edit-object-topic
