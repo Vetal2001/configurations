@@ -3,14 +3,14 @@ spring:
     livereload:
       port: 0
     add-properties: false
-  cassandra:
-    contact-points: 192.168.1.111,192.168.1.112,192.168.1.113
-    local-datacenter: datacenter1
-    keyspace-name: telematics
-    username: mirep
-    password: daPi-oLW4g
-    request:
-      timeout: 600s
+  # cassandra:
+  #   contact-points: 192.168.1.111,192.168.1.112,192.168.1.113
+  #   local-datacenter: datacenter1
+  #   keyspace-name: telematics
+  #   username: mirep
+  #   password: daPi-oLW4g
+  #   request:
+  #     timeout: 600s
   data:
     redis:
       host: 192.168.1.41
@@ -32,6 +32,29 @@ spring:
 
 debug: false
 
+clickhouse:
+  host: 192.168.1.252
+  port: 8123
+  username: default
+  password: nqRSRCPi
+  database: dev_telematics
+  telematics-table: raw_telematics
+  max-connections: 1000
+
+cassandra:
+  hosts: 192.168.1.111,192.168.1.112,192.168.1.113
+  port: 9042
+  username: mirep
+  password: daPi-oLW4g
+  datacenter: datacenter1
+  #Размер пакетов для вставки
+  batch-buffer-size: 35
+  #Начальная задержка между пакетами для вставки(мс)
+  batch-delay: 1
+  templates:
+    keyspace: mirep
+    telematics-table: all_telematics
+
 
 # cassandra:
 #   host: 192.168.1.110
@@ -42,11 +65,15 @@ debug: false
 
 
 kafka:
-  read-all-data: false
+  read-all-data: true
   max-message-size: 5242880
   hosts: 192.168.1.41:9092
-  consumer-group: object-service
-  topics:
+  consumer-group: object-service-1
+  telematics:
+    max-processed-queue: 1000000
+  consumers:
+    telematics-consumer: telematics-consumer-1
+topics:
     object-topic: object-create-event-topic
     object-edit-topic: edit-object-topic
     object-new-topic: new-object-topic
@@ -62,12 +89,16 @@ eureka:
     prefer-ip-address: true
 
 mirep:
+  telematics:
+    #Архив какой глубины отправлять в кафка (часы).
+    #Данные ранее этого периода не будут отправлены в кафка для остальных сервисов
+    beginning-archive-to-kafka: 72
   db-settings:
     delay-saving-in-db: 10
   mem-table:
     max-days-in-mem: 7
   debug:
-    record-raw-data: false
+    record-raw-data: true
   route:
     point-limit: 30000
     expire-timeout: 48
@@ -80,7 +111,7 @@ mirep:
     max-dist: 10000
     min-sat-count: 4
   services-url:
-    xlsx-parsing-service: http://xlsx-parsing-service/v1
+    xlsx-parsing-service: lb://xlsx-parsing-service/v1
 
 management:
   endpoints:
@@ -94,18 +125,23 @@ logging:
     org.springframework.r2dbc: info
     org.springframework.web.reactive.function.client: info
     org.springframework.data.mongodb: info
+    org.springframework.data.cassandra: info
     ru.gkmirep.object_service.controllers.ObjectGroupController: info
-    ru.gkmirep.object_service.controllers.ObjectController: info
-    ru.gkmirep.object_service.controllers.TelematicsDataController: debug
+    ru.gkmirep.object_service.controllers.ObjectController: trace
+    ru.gkmirep.object_service.controllers.TelematicsDataController: trace
     ru.gkmirep.object_service.mappers.ObjectMapperService: info
-    ru.gkmirep.object_service.kafka.TelematicsDataKafkaConsumerService: trace
+    ru.gkmirep.object_service.kafka.TelematicsDataKafkaConsumerService: info
     ru.gkmirep.object_service.kafka.ObjectKafkaConsumerService: debug
-    ru.gkmirep.object_service.kafka.producers.ProcessedTelematicsDataKafkaProducerService: info
+    ru.gkmirep.object_service.kafka.producers.ProcessedTelematicsDataKafkaProducerService: trace
     ru.gkmirep.object_service.services.object.ObjectService: trace
+    ru.gkmirep.object_service.services.mongo_query.ObjectMDBQueryService: trace
     ru.gkmirep.object_service.services.processing.ObjectProcessingService: info
-    ru.gkmirep.object_service.services.sql.TelematicsDataMemSqlQueryService: info
+    ru.gkmirep.object_service.services.processing.TelematicsProcessingService: debug
+    ru.gkmirep.object_service.services.sql.TelematicsDataMemSqlQueryService: trace
     ru.gkmirep.object_service.services.sql.ObjectMemorySQLQueryService: info
+    ru.gkmirep.object_service.services.cassandra.CQLCassandraService: info
     ru.gkmirep.object_service.services.cassandra.TelematicsCassandraQueryService: debug
+    ru.gkmirep.object_service.services.clickhouse.SQLClickHouseService: trace
     ru.gkmirep.object_service.listeners.TelematicsDataEventListenerService: info
   file:
     name: logs/object-service.log
