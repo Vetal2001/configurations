@@ -48,7 +48,7 @@ cassandra:
 
 
 kafka:
-  read-all-data: true
+  read-all-data: false
   max-message-size: 5242880
   hosts: 192.168.1.41:9092
   consumer-group: object-service-8
@@ -76,7 +76,7 @@ mirep:
     # Архив какой глубины отправлять в кафка (часы).
     # Данные ранее этого периода не будут отправлены в кафка для остальных сервисов
     beginning-archive-to-kafka: 72
-    need-send-to-kafka: false
+    need-send-to-kafka: true
   db-settings:
     delay-saving-in-db: 10
   mem-table:
@@ -125,7 +125,7 @@ logging:
     ru.gkmirep.object_service.services.sql.ObjectMemorySQLQueryService: info
     ru.gkmirep.object_service.services.cassandra.CQLCassandraService: info
     ru.gkmirep.object_service.services.cassandra.TelematicsCassandraQueryService: debug
-    ru.gkmirep.object_service.services.clickhouse.SQLClickHouseService: trace
+    ru.gkmirep.object_service.services.clickhouse.SQLClickHouseService: info
     ru.gkmirep.object_service.listeners.TelematicsDataEventListenerService: info
   file:
     name: logs/object-service.log
