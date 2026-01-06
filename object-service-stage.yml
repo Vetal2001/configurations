@@ -111,20 +111,20 @@ logging:
     org.springframework.data.mongodb: info
     org.springframework.data.cassandra: info
     ru.gkmirep.object_service.controllers.ObjectGroupController: info
-    ru.gkmirep.object_service.controllers.ObjectController: trace
-    ru.gkmirep.object_service.controllers.TelematicsDataController: trace
+    ru.gkmirep.object_service.controllers.ObjectController: info
+    ru.gkmirep.object_service.controllers.TelematicsDataController: info
     ru.gkmirep.object_service.mappers.ObjectMapperService: info
     ru.gkmirep.object_service.kafka.TelematicsDataKafkaConsumerService: info
-    ru.gkmirep.object_service.kafka.ObjectKafkaConsumerService: debug
-    ru.gkmirep.object_service.kafka.producers.ProcessedTelematicsDataKafkaProducerService: trace
-    ru.gkmirep.object_service.services.object.ObjectService: trace
-    ru.gkmirep.object_service.services.mongo_query.ObjectMDBQueryService: trace
+    ru.gkmirep.object_service.kafka.ObjectKafkaConsumerService: info
+    ru.gkmirep.object_service.kafka.producers.ProcessedTelematicsDataKafkaProducerService: info
+    ru.gkmirep.object_service.services.object.ObjectService: info
+    ru.gkmirep.object_service.services.mongo_query.ObjectMDBQueryService: info
     ru.gkmirep.object_service.services.processing.ObjectProcessingService: info
-    ru.gkmirep.object_service.services.processing.TelematicsProcessingService: debug
-    ru.gkmirep.object_service.services.sql.TelematicsDataMemSqlQueryService: trace
+    ru.gkmirep.object_service.services.processing.TelematicsProcessingService: info
+    ru.gkmirep.object_service.services.sql.TelematicsDataMemSqlQueryService: info
     ru.gkmirep.object_service.services.sql.ObjectMemorySQLQueryService: info
     ru.gkmirep.object_service.services.cassandra.CQLCassandraService: info
-    ru.gkmirep.object_service.services.cassandra.TelematicsCassandraQueryService: debug
+    ru.gkmirep.object_service.services.cassandra.TelematicsCassandraQueryService: info
     ru.gkmirep.object_service.services.clickhouse.SQLClickHouseService: info
     ru.gkmirep.object_service.listeners.TelematicsDataEventListenerService: info
   file:
