@@ -120,7 +120,7 @@ logging:
     ru.gkmirep.object_service.services.object.ObjectService: info
     ru.gkmirep.object_service.services.mongo_query.ObjectMDBQueryService: info
     ru.gkmirep.object_service.services.processing.ObjectProcessingService: info
-    ru.gkmirep.object_service.services.processing.TelematicsProcessingService: info
+    ru.gkmirep.object_service.services.processing.TelematicsProcessingService: debug
     ru.gkmirep.object_service.services.sql.TelematicsDataMemSqlQueryService: info
     ru.gkmirep.object_service.services.sql.ObjectMemorySQLQueryService: info
     ru.gkmirep.object_service.services.cassandra.CQLCassandraService: info
