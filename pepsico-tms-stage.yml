@@ -10,12 +10,13 @@ spring:
       host: 192.168.1.41
       port: 6379
       command-timeout: 1000 #ms
-    mongodb:
-      host: 192.168.1.41
-      port: 27017
-      username: mirep
-      password: cWlp40To
-      database: maBase
+      pool-size: 100
+  mongodb:
+    host: 192.168.1.41
+    port: 27017
+    username: mirep
+    password: cWlp40To
+    database: maBase
 
 
 
@@ -53,7 +54,9 @@ management:
 mirep:
   trip:
     hours-offset-to-complete: 40
-  route:
+    #минимальная длительность стоянки в зоне, для фиксации посещения
+    min-stop-duration-in-zone: 1200
+route:
     request-interval: 10800
   debug:
     record-raw-ptd: false
@@ -66,6 +69,22 @@ mirep:
     geo-service: lb://geoservice/v1
     pepsico-point-service: lb://pepsico-points/v1/pepsico/point/dto/location
     object-service: lb://object-service/v1
+  logging:
+    #controllers
+    TripController: INFO
+    TMSLoadingController: INFO
+    PepsicoMonitoringTripsController: INFO
+    #kafka
+    TelematicsDataKafkaConsumerService: INFO
+    #services
+    TripProcessingService: INFO
+    TripProcessingServiceImpl: INFO
+    TripCalculatingServiceImpl: INFO
+    TripsParsingService: INFO
+    TripReportsMappingService: INFO
+    TripReportService: INFO
+    XlsxTripReportService: INFO
+    XlsxParsingService: INFO
 logging:
   level:
     org.springframework.data.mongodb: trace
