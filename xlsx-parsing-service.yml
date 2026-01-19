@@ -27,11 +27,23 @@ management:
     enabled-by-default: true
 
 logging:
+  level:
+    ru.gkmirep.xlsxparsingservice.services.PepsicoTMSXLSXParsingService: trace
   file:
     name: /logs/xlsx-service.log
+
+mirep:
+  logging:
+    #controllers
+    PepsicoXlsxParsingController: INFO
+    #services
+    XlsxParsingService: INFO
+    PepsicoTMSXLSXParsingService: INFO
+
 
 xlsx:
   upload-path: ./upload
   shpt-path: ./shpt
 
 debug: false
+
