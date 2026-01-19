@@ -19,14 +19,6 @@ spring:
     database: maBase
 
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://192.168.1.41:9999/eureka/
-    # fetch-registry: false
-    # register-with-eureka: false
-  instance:
-    prefer-ip-address: true
 
 debug: false
 
@@ -43,6 +35,15 @@ kafka:
     pepsico-point-new: pepsico-point-new-topic
   trusted: '*'
 
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.41:9999/eureka/
+    # fetch-registry: false
+    # register-with-eureka: false
+  instance:
+    prefer-ip-address: true
 
 management:
   endpoints:
