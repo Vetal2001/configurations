@@ -5,13 +5,12 @@ spring:
   threads:
     virtual:
       enabled: true
-  data:
-    mongodb:
-      host: 192.168.1.41
-      port: 27017
-      username: mirep
-      password: cWlp40To
-      database: maBase
+  mongodb:
+    host: 192.168.1.41
+    port: 27017
+    username: mirep
+    password: cWlp40To
+    database: maBase
 eureka:
   client:
     service-url:
@@ -31,6 +30,10 @@ management:
 #  port: 8091
 
 mirep:
+  credintals:
+    fort:
+      login: mirep_api
+      password: 2-OUgyQYK3
   api-keys:
     ya-geocoding-key: fd438dd9-2add-439d-a91f-1c0eff21a158
     ya-routing-key: 6696e47a-f4c1-4952-a787-74aa9d6c074f
@@ -39,10 +42,19 @@ mirep:
   paths:
     reports: ./reports
   services-url:
+    fort-api-service: https://client.gk-mirep.ru/api/integration/v1
     ya-geocoding: https://geocode-maps.yandex.ru/v1
     ya-routing": https://api.routing.yandex.net/v2
     dadata-geocoding: https://cleaner.dadata.ru/api/v1/clean/address
     dadata-reverse-geocoding: http://suggestions.dadata.ru/suggestions/api/4_1/rs
+  logging:
+    #controllers
+    ReverseGeoCodingController: INFO
+    #services
+    YandexRoutingService: INFO
+    FortApiGeocodingService: INFO
+    ReverseGeocodingService: INFO
+
 logging:
   level:
     org.springframework.data.mongodb: info
@@ -53,5 +65,7 @@ logging:
     ru.gkmirep.geoservice.services.YandexRoutingService: trace
     ru.gkmirep.geoservice.services.YaGeocodingService: trace
     ru.gkmirep.geoservice.controllers.RouteController: info
+    ru.gkmirep.geoservice.services.FortApiGeocodingService: trace
+    ru.gkmirep.geoservice.services.ReverseGeocodingService: trace
   file:
     name: logs\geoservice.log
