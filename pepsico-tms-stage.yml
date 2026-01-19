@@ -56,7 +56,7 @@ mirep:
     hours-offset-to-complete: 40
     #минимальная длительность стоянки в зоне, для фиксации посещения
     min-stop-duration-in-zone: 1200
-route:
+  route:
     request-interval: 10800
   debug:
     record-raw-ptd: false
