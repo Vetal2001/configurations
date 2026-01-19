@@ -19,7 +19,6 @@ spring:
     database: maBase
 
 
-
 eureka:
   client:
     service-url:
