@@ -84,7 +84,7 @@ mirep:
     TripCalculatingServiceImpl: INFO
     TripsParsingService: INFO
     TripReportsMappingService: INFO
-    TripReportService: INFO
+    TripReportService: TRACE
     XlsxTripReportService: INFO
     XlsxParsingService: INFO
 logging:
