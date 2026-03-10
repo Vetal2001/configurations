@@ -105,6 +105,16 @@ spring:
           metadata:
             response-timeout: 20000
             connect-timeout: 20000
+        #wbd-branch
+        - id: wbd-branch
+          uri: http://localhost:8099
+          predicates:
+            - Path=/wbd-branch/**
+          filters:
+            - RewritePath=/wbd-branch/?(?<segment>.*),/$\{segment}
+          metadata:
+            response-timeout: 20000
+            connect-timeout: 20000
 management:
   endpoints:
     enabled-by-default: true
