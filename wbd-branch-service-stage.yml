@@ -1,1 +1,52 @@
+spring:
+  mongodb:
+    host: 192.168.1.41
+    port: 27017
+    username: mirep
+    password: cWlp40To
+    database: dev-ma-base
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+    enabled: false
+
+
+kafka:
+  hosts: 192.168.1.41:9092
+  consumer:
+    group: dev-branch-consumer
+    trusted: '*'
+  topics:
+    new-branch: branch-creating-topic
+    change-branch: branch-changing-topic
+    delete-branch: branch-deleting-topic
+
+
+server:
+  port: 8099
+
+mirep:
+  logging:
+    #controller
+    BranchHandler: TRACE
+    #kafka
+    AbstractCatalogKafkaProducingService: TRACE
+    BranchKafkaProducingService: TRACE
+    #services
+    BranchService: TRACE
+    BranchMongoService: TRACE
+logging:
+  level:
+    org.springframework.web: trace
+    #utils
+    ru.gkmirep.kafka_util_lib.producer_service.AbstractCatalogKafkaProducingService: trace
+    ru.gkmirep.mongo_util_lib.mongo_catalog.AbstractMongoCatalogService: trace
+
+    ru.gkmirep.wbd_branch_service.kafka.BranchKafkaProducingService: trace
+    ru.gkmirep.wbd_branch_service.services.BranchService: trace
+    ru.gkmirep.wbd_branch_service.services.mongo.BranchMongoService: trace
+  file:
+    name: /logs/wbd-branch.log
 
