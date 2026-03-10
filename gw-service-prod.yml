@@ -107,7 +107,7 @@ spring:
             connect-timeout: 20000
         #wbd-branch
         - id: wbd-branch
-          uri: http://localhost:8099
+          uri: lb://wbd-branch-service
           predicates:
             - Path=/wbd-branch/**
           filters:
