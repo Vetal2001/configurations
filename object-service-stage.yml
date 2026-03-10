@@ -97,6 +97,10 @@ mirep:
     min-sat-count: 4
   services-url:
     xlsx-parsing-service: lb://xlsx-parsing-service/v1
+    geo-service: http://127.0.0.1:8091/v1
+  paths:
+    reports: ./reports
+    uploads: ./uploads
   logging:
     #controllers
     ObjectController: INFO
