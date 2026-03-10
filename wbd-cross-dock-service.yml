@@ -57,7 +57,7 @@ mirep:
   services-url:
     fm3-geozone-service: http://fm3-geozone-service/v1
     warehouse-service: http://wbd-warehouse-service/v1
-    geo-service: http://127.0.0.1:8091/v1
+    geo-service: lb://geoservice/v1
 logging:
   file:
     name: /logs/wbd-cross-dock.log
