@@ -4,7 +4,7 @@ spring:
     port: 27017
     username: mirep
     password: cWlp40To
-    database: dev-ma-base
+    database: maBase
 
 eureka:
   client:
