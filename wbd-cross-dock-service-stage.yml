@@ -61,9 +61,9 @@ mirep:
 logging:
   file:
     name: /logs/wbd-cross-dock.log
-  # level:
+  level:
     # org.springframework.r2dbc: debug
-    # org.springframework.web.reactive.function.client: debug
+    org.springframework.web.reactive.function.client: trace
     # ru.gkmirep.wbdcrossdockservice.services.CrossDockService: debug
     # ru.gkmirep.wbdcrossdockservice.services.Fm3GeoZoneService: debug
     # ru.gkmirep.wbdcrossdockservice.services.WarehouseService: debug
