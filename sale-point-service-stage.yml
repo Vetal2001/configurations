@@ -72,6 +72,15 @@ mirep:
     cross-dock-service: lb://wbd-cross-dock-service/v2
     geo-service: lb://geoservice/v1
     xlsx-parsing-service: lb://xlsx-parsing-service/v1
+  logging:
+    #kafka
+    SalePointKafkaProducingService: INFO
+    SalePointKafkaConsumerService: INFO
+    #services
+    HttpWbdBranchService: INFO
+    HttpWbdCrossDockService: INFO
+    BranchRedisService: INFO
+    BranchMappingService: INFO
 
 logging:
   # level:
