@@ -69,7 +69,8 @@ mirep:
   services-url:
     branch-service: lb://wbd-branch-service/v1
     fm3-geozone-service: http://fm3-geozone-service/v1
-    cross-dock-service: lb://wbd-cross-dock-service/v2
+    cross-dock-service_1: lb://wbd-cross-dock-service/v1
+    cross-dock-service_2: lb://wbd-cross-dock-service/v2
     geo-service: lb://geoservice/v1
     xlsx-parsing-service: lb://xlsx-parsing-service/v1
   logging:
