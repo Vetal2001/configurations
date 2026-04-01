@@ -83,7 +83,8 @@ mirep:
     BranchMappingService: INFO
 
 logging:
- org.springframework.r2dbc: info
+  level:
+    org.springframework.r2dbc: info
     org.springframework.web.reactive.function.client: info
     org.springframework.data.mongodb: info
     ru.gkmirep.core.services.XlsxReportService: debug
