@@ -64,7 +64,7 @@ management:
 mirep:
   paths:
     reports: ./reports
-    uploads: ./uploads
+    uploads: ./upload
     parse-url: sale_points
   services-url:
     branch-service: lb://wbd-branch-service/v1
