@@ -54,6 +54,10 @@ server:
   port: 8085
 
 mirep:
+  paths:
+    reports: ./reports
+    uploads: ./uploads
+    pathUrl: cross-dock
   services-url:
     fm3-geozone-service: http://fm3-geozone-service/v1
     warehouse-service: http://wbd-warehouse-service/v1
