@@ -30,6 +30,10 @@ server:
   port: 8099
 
 mirep:
+  paths:
+    reports: ./reports
+    uploads: ./uploads
+    parsing-url: wbd-branch
   logging:
     #controller
     BranchHandler: TRACE
