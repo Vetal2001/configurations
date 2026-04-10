@@ -18,8 +18,8 @@ spring:
           filters:
             - RewritePath=/trips/?(?<segment>.*),/$\{segment}
           metadata:
-            response-timeout: 2000000
-            connect-timeout: 200000
+            response-timeout: 600000
+            connect-timeout: 20000
         - id: pepsico-tms-service
           uri: lb://pepsico-tms
           predicates:
