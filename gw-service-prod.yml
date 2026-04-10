@@ -73,7 +73,7 @@ spring:
           filters:
             - RewritePath=/rm-tms/?(?<segment>.*),/$\{segment}
           metadata:
-            response-timeout: 20000
+            response-timeout: 2000000
             connect-timeout: 20000
       #geoservice
         - id: geoservice
