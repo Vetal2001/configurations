@@ -11,12 +11,14 @@ spring:
     redis:
       host: 192.168.1.41
       port: 6379
-    mongodb:
-      host: 192.168.1.41
-      port: 27017
-      username: mirep
-      password: cWlp40To
-      database: maBase
+      timeout: 10000
+      pool-size: 100
+  mongodb:
+    host: 192.168.1.41
+    port: 27017
+    username: mirep
+    password: cWlp40To
+    database: maBase
   r2dbc:
     host: 192.168.1.251
     port: 3306
@@ -44,18 +46,63 @@ management:
     web:
       exposure:
         include: refresh
-
+kafka:
+  hosts: 192.168.1.41:9092
+  consumer:
+    group: wbd-trip-consumer
+    trusted: '*'
+  topics:
+    new: wbd-sp-creating-topic
+    change: wbd-sp-changing-topic
+    delete: wbd-sp-deleting-topic
+    create-sp: wbd-new-sp-topic
+    new-cd: wbd-cd-creating-topic
+    change-cd: wbd-cd-changing-topic
+    delete-cd: wbd-cd-deleting-topic
+    new-branch: wbd-branch-creating-topic
+    change-branch: wbd-branch-changing-topic
+    delete-branch: wbd-branch-deleting-topic
   
 mirep:
+  key: 10601ddaf98891270d42b937053b7249c2dfdb1695462a18dbc77637bd4c941d
   paths:
-    reports: /reports
+    reports: ./reports
+    uploads: ./uploads
   services-url:
-    sale-point-service: http://sale-point-service/v1
-    cross-dock-service: http://wbd-cross-dock-service/v1
-    fm3-object-service: http://fm3-object-service/v1
-    fm3-telematics-data-service: http://fm3-telematics-data-service/v1
-    xlsx-parsing-service: http://xlsx-parsing-service/v1
-    wbd-plant-service: http://wbd-plant-service/v1
+    sale-point-service_v1: lb://sale-point-service/v1
+    sale-point-service: lb://sale-point-service/v2
+    branch-service: http://127.0.0.1:8099/v1
+    cross-dock-service_v1: lb://wbd-cross-dock-service/v1
+    cross-dock-service: lb://wbd-cross-dock-service/v2
+    fm3-object-service: lb://fm3-object-service/v1
+    fm3-telematics-data-service: lb://fm3-telematics-data-service/v1
+    xlsx-parsing-service: lb://xlsx-parsing-service/v1
+    wbd-plant-service: lb://wbd-plant-service/v1
+    object-service: lb://object-service/v1
+    geo-service: lb://geoservice/v1
+  logging:
+    #services
+    HttpWbdBranchService: TRACE
+    HttpWbdCrossDockService: TRACE
+    cross-dock-redis-service: TRACE
+    BranchRedisService: TRACE
+    BranchMappingService: TRACE
+    branch-redis-service: TRACE
+    redis-sale-point-service: TRACE
+    http-sale-point-service: TRACE
+    http-vehicle-service: TRACE
+    redis-vehicle-service: TRACE
+    http-object-service: TRACE
+    fm3-object-service: TRACE
+    http-geo-service: TRACE
+    sale_points_kafka_producer_service: INFO
+    fm3-telematics-service: INFO
+    telematics-data-service: TRACE
+    trip-calculating-service: TRACE
+    trip-mapping-service: TRACE
+    trip-migration-service: TRACE
+    trip-mongo-service-1: TRACE
+
 logging:
   level:
   #   org.springframework.r2dbc: info
