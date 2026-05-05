@@ -105,24 +105,25 @@ mirep:
 
 logging:
   level:
-  #   org.springframework.r2dbc: info
-  #   org.springframework.data.mongodb: info
-    # org.springframework.web.reactive.function.client: trace
-  #   ru.gkmirep.tripservice.controllers.TripController: debug
-  #   ru.gkmirep.tripservice.controllers.TripsMonitoringReportController: debug
-  #   ru.gkmirep.tripservice.mappers.trip.TripMapperService: debug
-  #   ru.gkmirep.tripservice.services.http_services.Fm3ObjectService: info
-  #   ru.gkmirep.tripservice.services.http_services.SalePointService: info
-  #   ru.gkmirep.tripservice.services.http_services.CrossDockService: info
-  #   ru.gkmirep.tripservice.services.http_services.Fm3TelematicsDataService: info
-  #   ru.gkmirep.tripservice.services.rdbc.TripServiceRDBC: info
-  #   ru.gkmirep.tripservice.services.trip.TripService: info
-  #   ru.gkmirep.tripservice.services.trip.TripReportService: info
-  #   ru.gkmirep.tripservice.services.trip.TripStatesService: info
-  #   ru.gkmirep.tripservice.services.trip.WbdSHPTTripService: info
-  #   ru.gkmirep.tripservice.services.trip.WbdMonitoringReportService: info
-  #   ru.gkmirep.tripservice.services.trip.WbdTempReportService: info
-  #   ru.gkmirep.tripservice.services.http_services.XlsxParsingService: info
-  #   ru.gkmirep.tripservice.services.XlsxReportService: debug
+    org.springframework.r2dbc: info
+    org.springframework.data.mongodb: info
+    org.springframework.web.reactive.function.client: info
+    ru.gkmirep.tripservice.controllers.TripController: debug
+    ru.gkmirep.tripservice.controllers.TripsMonitoringReportController: debug
+    ru.gkmirep.tripservice.mappers.trip.TripMapperService: debug
+    ru.gkmirep.tripservice.services.http_services.Fm3ObjectService: info
+    ru.gkmirep.tripservice.services.http_services.SalePointService: info
+    ru.gkmirep.tripservice.services.http_services.CrossDockService: info
+    ru.gkmirep.tripservice.services.http_services.Fm3TelematicsDataService: info
+    ru.gkmirep.tripservice.services.rdbc.TripServiceRDBC: info
+    ru.gkmirep.tripservice.services.trip.TripService: info
+    ru.gkmirep.tripservice.services.trip.TripReportService: info
+    ru.gkmirep.tripservice.services.trip.TripStatesService: info
+    ru.gkmirep.tripservice.services.trip.WbdSHPTTripService: info
+    ru.gkmirep.tripservice.services.trip.WbdMonitoringReportService: info
+    ru.gkmirep.tripservice.services.trip.WbdTempReportService: info
+    ru.gkmirep.tripservice.services.http_services.XlsxParsingService: info
+    ru.gkmirep.tripservice.services.XlsxReportService: debug
+    ru.gkmirep.core.utils.ExUtils: info
   file:
     name: /logs/trip-service.log
