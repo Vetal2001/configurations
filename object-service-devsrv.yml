@@ -1,0 +1,143 @@
+spring:
+  devtools:
+    livereload:
+      port: 0
+    add-properties: false
+  data:
+    redis:
+      host: 192.168.1.41
+      port: 6379
+      command-timeout: 10000 #ms
+      pool-size: 100
+  mongodb:
+    host: 192.168.1.41
+    port: 27017
+    username: mirep
+    password: cWlp40To
+    database: maBase
+  r2dbc:
+    host: 192.168.1.251
+    port: 3306
+    database: extm1base
+    username: dbuser
+    password: 367Qh7dzNB
+
+debug: false
+
+clickhouse:
+  host: 192.168.1.252
+  port: 8123
+  username: default
+  password: nqRSRCPi
+  database: mirep
+  telematics-table: raw_telematics
+  max-connections: 1000
+
+cassandra:
+  hosts: 192.168.1.111,192.168.1.112,192.168.1.113
+  port: 9042
+  username: mirep
+  password: daPi-oLW4g
+  datacenter: datacenter1
+  #Размер пакетов для вставки
+  batch-buffer-size: 35
+  #Начальная задержка между пакетами для вставки(мс)
+  batch-delay: 1
+  templates:
+    keyspace: mirep
+    telematics-table: all_telematics
+
+
+kafka:
+  read-all-data: false
+  max-message-size: 5242880
+  hosts: 192.168.1.41:9092
+  consumer-group: object-service-8
+  telematics:
+    max-processed-queue: 500000
+  consumers:
+    telematics-consumer: telematics-consumer-8
+  topics:
+    object-topic: object-create-event-topic
+    object-edit-topic: edit-object-topic
+    object-new-topic: new-object-topic
+    object-delete-topic: delete-object-topic
+    new-processed-data: new-processed-data-topic
+  trusted: '*'
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+  instance:
+    prefer-ip-address: true
+
+mirep:
+  telematics:
+    # Архив какой глубины отправлять в кафка (часы).
+    # Данные ранее этого периода не будут отправлены в кафка для остальных сервисов
+    beginning-archive-to-kafka: 72
+    need-send-to-kafka: true
+  db-settings:
+    delay-saving-in-db: 10
+  mem-table:
+    max-days-in-mem: 7
+  debug:
+    record-raw-data: true
+  route:
+    point-limit: 30000
+    expire-timeout: 48
+  move-state:
+    min-speed: 5
+    min-dist: 100
+    ign-analyze: true
+  validate-object:
+    max-speed: 300
+    max-dist: 10000
+    min-sat-count: 4
+  services-url:
+    xlsx-parsing-service: lb://xlsx-parsing-service/v1
+    geo-service: lb://geoservice/v1
+  paths:
+    reports: ./reports
+    uploads: ./uploads
+  logging:
+    #controllers
+    ObjectController: INFO
+    #services
+    ObjectService: INFO
+    TelematicsRedisService: INFO
+    TelematicsProcessingService: DEBUG
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: refresh
+
+logging:
+  level:    
+    org.springframework.r2dbc: info
+    org.springframework.web.reactive.function.client: info
+    org.springframework.data.mongodb: info
+    org.springframework.data.cassandra: info
+    ru.gkmirep.object_service.controllers.ObjectGroupController: info
+    ru.gkmirep.object_service.controllers.ObjectController: trace
+    ru.gkmirep.object_service.controllers.TelematicsDataController: info
+    ru.gkmirep.object_service.mappers.ObjectMapperService: info
+    ru.gkmirep.object_service.kafka.TelematicsDataKafkaConsumerService: info
+    ru.gkmirep.object_service.kafka.ObjectKafkaConsumerService: info
+    ru.gkmirep.object_service.kafka.producers.ProcessedTelematicsDataKafkaProducerService: info
+    ru.gkmirep.object_service.services.object.ObjectService: trace
+    ru.gkmirep.object_service.services.mongo_query.ObjectMDBQueryService: info
+    ru.gkmirep.object_service.services.processing.ObjectProcessingService: info
+    ru.gkmirep.object_service.services.processing.TelematicsProcessingService: trace
+    ru.gkmirep.object_service.services.sql.TelematicsDataMemSqlQueryService: info
+    ru.gkmirep.object_service.services.sql.ObjectMemorySQLQueryService: info
+    ru.gkmirep.object_service.services.cassandra.CQLCassandraService: info
+    ru.gkmirep.object_service.services.cassandra.TelematicsCassandraQueryService: info
+    ru.gkmirep.object_service.services.clickhouse.SQLClickHouseService: info
+    ru.gkmirep.object_service.listeners.TelematicsDataEventListenerService: info
+  file:
+    name: logs/object-service.log
