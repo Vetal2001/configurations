@@ -72,7 +72,7 @@ mirep:
   services-url:
     sale-point-service_v1: lb://sale-point-service/v1
     sale-point-service: lb://sale-point-service/v2
-    branch-service: http://127.0.0.1:8099/v1
+    branch-service: lb://wbd-branch-service/v1
     cross-dock-service_v1: lb://wbd-cross-dock-service/v1
     cross-dock-service: lb://wbd-cross-dock-service/v2
     fm3-object-service: lb://fm3-object-service/v1
