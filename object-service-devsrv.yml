@@ -5,16 +5,16 @@ spring:
     add-properties: false
   data:
     redis:
-      host: 192.168.1.41
+      host: 192.168.1.150
       port: 6379
-      command-timeout: 10000 #ms
+      command-timeout: 20000 #ms
       pool-size: 100
   mongodb:
     host: 192.168.1.41
     port: 27017
     username: mirep
     password: cWlp40To
-    database: maBase
+    database: dev-ma-base
   r2dbc:
     host: 192.168.1.251
     port: 3306
@@ -29,7 +29,7 @@ clickhouse:
   port: 8123
   username: default
   password: nqRSRCPi
-  database: mirep
+  database: dev_telematics
   telematics-table: raw_telematics
   max-connections: 1000
 
@@ -44,7 +44,7 @@ cassandra:
   #Начальная задержка между пакетами для вставки(мс)
   batch-delay: 1
   templates:
-    keyspace: mirep
+    keyspace: dev_mirep
     telematics-table: all_telematics
 
 
@@ -52,23 +52,24 @@ kafka:
   read-all-data: false
   max-message-size: 5242880
   hosts: 192.168.1.41:9092
-  consumer-group: object-service-8
+  consumer-group: dev-object-service-128
   telematics:
     max-processed-queue: 500000
   consumers:
-    telematics-consumer: telematics-consumer-8
+    telematics-consumer: telematics-consumer-5
   topics:
-    object-topic: object-create-event-topic
-    object-edit-topic: edit-object-topic
-    object-new-topic: new-object-topic
-    object-delete-topic: delete-object-topic
-    new-processed-data: new-processed-data-topic
+    object-topic: dev-object-create-event-topic
+    object-edit-topic: dev-edit-object-topic
+    object-new-topic: dev-new-object-topic
+    object-delete-topic: dev-delete-object-topic
+    new-processed-data: dev-new-processed-data-topic
   trusted: '*'
 
 eureka:
   client:
     service-url:
       defaultZone: http://192.168.1.41:9999/eureka/
+    enabled: false
   instance:
     prefer-ip-address: true
 
@@ -76,7 +77,7 @@ mirep:
   telematics:
     # Архив какой глубины отправлять в кафка (часы).
     # Данные ранее этого периода не будут отправлены в кафка для остальных сервисов
-    beginning-archive-to-kafka: 72
+    beginning-archive-to-kafka: 48
     need-send-to-kafka: true
   db-settings:
     delay-saving-in-db: 10
@@ -96,8 +97,8 @@ mirep:
     max-dist: 10000
     min-sat-count: 4
   services-url:
-    xlsx-parsing-service: lb://xlsx-parsing-service/v1
-    geo-service: lb://geoservice/v1
+    xlsx-parsing-service: http://127.0.0.1:9091/v1
+    geo-service: http://127.0.0.1:8091/v1
   paths:
     reports: ./reports
     uploads: ./uploads
@@ -140,4 +141,4 @@ logging:
     ru.gkmirep.object_service.services.clickhouse.SQLClickHouseService: info
     ru.gkmirep.object_service.listeners.TelematicsDataEventListenerService: info
   file:
-    name: logs/object-service.log
+    name: logs/object-service-dev.log
