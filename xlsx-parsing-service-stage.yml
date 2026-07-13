@@ -26,20 +26,13 @@ management:
         include: refresh
     enabled-by-default: true
 
-logging:
-  level:
-    ru.gkmirep.xlsxparsingservice.services.PepsicoTMSXLSXParsingService: trace
-  file:
-    name: /logs/xlsx-service.log
-
 mirep:
   logging:
     #controllers
-    PepsicoXlsxParsingController: INFO
+    PepsicoXlsxParsingController: TRACE
     #services
     XlsxParsingService: INFO
     PepsicoTMSXLSXParsingService: INFO
-
 
 xlsx:
   upload-path: ./upload
@@ -47,3 +40,8 @@ xlsx:
 
 debug: false
 
+logging:
+  level:
+    ru.gkmirep.xlsxparsingservice.services.PepsicoTMSXLSXParsingService: trace
+  file:
+    name: /logs/xlsx-service.log
