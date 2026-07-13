@@ -10,17 +10,15 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.1.41:9999/eureka/
-    enabled: true
+  instance:
+    prefer-ip-address: true
 
 kafka:
   hosts: 192.168.1.41:9092
   consumer:
-    group: dev-mail-service-consumer
+    group: mail-service-consumer
     trusted: '*'
   topics:
-    new-branch: dev-branch-creating-topic
-    change-branch: dev-branch-changing-topic
-    delete-branch: dev-branch-deleting-topic
 
 
 
