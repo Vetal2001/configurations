@@ -88,6 +88,7 @@ mirep:
     TripReportService: TRACE
     XlsxTripReportService: TRACE
     XlsxParsingService: INFO
+    object-kafka-consumer-service: TRACE
 logging:
   level:
     org.springframework.data.mongodb: trace
@@ -101,6 +102,7 @@ logging:
     ru.gkmirep.pepsico_tms.kafka.TelematicsDataKafkaConsumerService: info
     ru.gkmirep.pepsico_tms.kafka.object.ObjectKafkaProducerService: info
     ru.gkmirep.pepsico_tms.kafka.object.ObjectKafkaConsumerService: debug
+    ru.gkmirep.pepsico_tms.kafka.points_statuses.PointsStatusesKafkaConsumer: trace
     ru.gkmirep.pepsico_tms.listeners.ProcessedTelematicsDataEventListener: debug
     ru.gkmirep.pepsico_tms.services.v1.https_services.PepsicoPointService: trace
     ru.gkmirep.pepsico_tms.services.v1.object.ObjectService: trace
