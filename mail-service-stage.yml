@@ -24,7 +24,7 @@ kafka:
 
 mirep:
   paths:
-    uploads: ../shpt
+    uploads: ./shpt
   logging:
     events-kafka-producer-service: TRACE
     mail-receiving-service: TRACE
