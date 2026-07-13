@@ -33,6 +33,7 @@ kafka:
     delete-object-topic: delete-object-topic
     pepsico-point-edit-topic: pepsico-point-edit-topic
     pepsico-point-new: pepsico-point-new-topic
+    points-statuses: dev-pepsico-statuses
   trusted: '*'
 
 
