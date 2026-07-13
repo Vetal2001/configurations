@@ -36,6 +36,7 @@ mirep:
 
 xlsx:
   upload-path: ./upload
+  shpt-path: ./shpt
 
 debug: false
 
