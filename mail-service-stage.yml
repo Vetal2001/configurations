@@ -1,0 +1,42 @@
+spring:
+  mongodb:
+    host: 192.168.1.41
+    port: 27017
+    username: mirep
+    password: cWlp40To
+    database: dev-ma-base
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.1.41:9999/eureka/
+    enabled: true
+
+kafka:
+  hosts: 192.168.1.41:9092
+  consumer:
+    group: dev-mail-service-consumer
+    trusted: '*'
+  topics:
+    new-branch: dev-branch-creating-topic
+    change-branch: dev-branch-changing-topic
+    delete-branch: dev-branch-deleting-topic
+
+
+
+mirep:
+  paths:
+    uploads: ../shpt
+  logging:
+    events-kafka-producer-service: TRACE
+    mail-receiving-service: TRACE
+    settings-handler: TRACE
+    scheduled-mail-reading-service: TRACE
+
+logging:
+  level:
+    ru.gkmirep.mail_service.kafka.EventsKafkaProducerService: trace
+    ru.gkmirep.mail_service.services.receiving.MailReceivingService: trace
+    ru.gkmirep.mail_service.services.scheduler.ScheduledMailReadingService: trace
+  file:
+    name: ../logs/mail-service.log
