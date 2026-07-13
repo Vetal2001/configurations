@@ -37,4 +37,4 @@ logging:
     ru.gkmirep.mail_service.services.receiving.MailReceivingService: trace
     ru.gkmirep.mail_service.services.scheduler.ScheduledMailReadingService: trace
   file:
-    name: ../logs/mail-service.log
+    name: /logs/mail-service.log
