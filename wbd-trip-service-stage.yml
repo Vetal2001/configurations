@@ -62,6 +62,7 @@ kafka:
     new-branch: wbd-branch-creating-topic
     change-branch: wbd-branch-changing-topic
     delete-branch: wbd-branch-deleting-topic
+    new-shpt: wbd-new-shtp
   
 mirep:
   key: 10601ddaf98891270d42b937053b7249c2dfdb1695462a18dbc77637bd4c941d
