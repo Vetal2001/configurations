@@ -98,12 +98,23 @@ mirep:
     http-geo-service: TRACE
     sale_points_kafka_producer_service: INFO
     fm3-telematics-service: INFO
-    telematics-data-service: TRACE
-    trip-calculating-service: TRACE
-    trip-mapping-service: TRACE
-    trip-migration-service: TRACE
-    trip-mongo-service-1: TRACE
-
+    telematics-data-service: INFO
+    trip-calculating-service: INFO
+    trip-mapping-service: INFO
+    trip-migration-service: INFO
+    trip-mongo-service-1: INFO
+    sale_points_kafka_consumer_service: INFO
+    sale_point_redis_mapping_service: INFO
+    trip-report-mapping-service: INFO
+    trips-reports-service: INFO
+    trips-reports-handler: INFO
+    trips-utils-handler: INFO
+    trips-parsing-handler: INFO
+    telematics-service: INFO
+    trip-route-handler: INFO
+    trip-management-service: INFO
+    cross-dock-kafka-consumer-service: INFO
+    shpt-kafka-consumer-service: TRACE
 logging:
   level:
     org.springframework.r2dbc: info
@@ -111,6 +122,9 @@ logging:
     org.springframework.web.reactive.function.client: info
     ru.gkmirep.tripservice.controllers.TripController: debug
     ru.gkmirep.tripservice.controllers.TripsMonitoringReportController: debug
+    ru.gkmirep.tripservice.kafka.sale_points.consumer.SalePointsKafkaConsumerService: trace
+    ru.gkmirep.tripservice.kafka.sale_points.producer.SalePointsKafkaProducerService: trace
+    ru.gkmirep.tripservice.kafka.shpt.ShptKafkaConsumerService: trace
     ru.gkmirep.tripservice.mappers.trip.TripMapperService: debug
     ru.gkmirep.tripservice.services.http_services.Fm3ObjectService: info
     ru.gkmirep.tripservice.services.http_services.SalePointService: info
