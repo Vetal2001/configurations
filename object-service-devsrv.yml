@@ -63,6 +63,7 @@ kafka:
     object-new-topic: dev-new-object-topic
     object-delete-topic: dev-delete-object-topic
     new-processed-data: dev-new-processed-data-topic
+    new-objects-topic: dev-pepsico-objects-new
   trusted: '*'
 
 eureka:
@@ -97,8 +98,8 @@ mirep:
     max-dist: 10000
     min-sat-count: 4
   services-url:
-    xlsx-parsing-service: http://127.0.0.1:9091/v1
-    geo-service: http://127.0.0.1:8091/v1
+    xlsx-parsing-service: http://192.168.1.18:9091/v1
+    geo-service: http://192.168.1.18:8091/v1
   paths:
     reports: ./reports
     uploads: ./uploads
