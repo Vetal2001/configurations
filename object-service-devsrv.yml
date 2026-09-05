@@ -40,7 +40,7 @@ cassandra:
   password: daPi-oLW4g
   datacenter: datacenter1
   #Размер пакетов для вставки
-  batch-buffer-size: 35
+  batch-buffer-size: 15
   #Начальная задержка между пакетами для вставки(мс)
   batch-delay: 1
   templates:
@@ -54,7 +54,7 @@ kafka:
   hosts: 192.168.1.41:9092
   consumer-group: dev-object-service-128
   telematics:
-    max-processed-queue: 500000
+    max-processed-queue: 250000
   consumers:
     telematics-consumer: telematics-consumer-5
   topics:
