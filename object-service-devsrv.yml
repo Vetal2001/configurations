@@ -40,9 +40,10 @@ cassandra:
   password: daPi-oLW4g
   datacenter: datacenter1
   #Размер пакетов для вставки
-  batch-buffer-size: 45
+  batch-buffer-size: 35
   #Таймауты
-  request_timeout: 35 #тайм-аут выполнения запроса (сек.)
+  #тайм-аут выполнения запроса (сек.)
+  request_timeout: 45 
   #Начальная задержка между пакетами для вставки(мс)
   batch-delay: 1
   templates:
