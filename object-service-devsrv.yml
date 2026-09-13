@@ -43,7 +43,7 @@ cassandra:
   batch-buffer-size: 35
   #Таймауты
   #тайм-аут выполнения запроса (сек.)
-  request_timeout: 45 
+  request_timeout: 55 
   #Начальная задержка между пакетами для вставки(мс)
   batch-delay: 1
   templates:
