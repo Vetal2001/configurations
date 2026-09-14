@@ -47,7 +47,7 @@ cassandra:
   # Пул соединений
   connection-pool-local-size: 8
   connection-pool-remote-size: 1
-  connection-max-requests: 5000
+  connection-max-requests: 1024
   #Начальная задержка между пакетами для вставки(мс)
   batch-delay: 1
   templates:
