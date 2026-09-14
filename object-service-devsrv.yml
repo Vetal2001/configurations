@@ -44,6 +44,10 @@ cassandra:
   #Таймауты
   #тайм-аут выполнения запроса (сек.)
   request_timeout: 55 
+  # Пул соединений
+  connection-pool-local-size: 5
+  connection-pool-remote-size: 5
+  connection-max-requests: 5000
   #Начальная задержка между пакетами для вставки(мс)
   batch-delay: 1
   templates:
