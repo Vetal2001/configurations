@@ -100,7 +100,7 @@ logging:
     ru.gkmirep.pepsico_tms.mappers.v1.PepsicoTripMapperService: info
     ru.gkmirep.pepsico_tms.mappers.v2.trip.services.TripParsingMappingService: info
     ru.gkmirep.pepsico_tms.dtos.v1.monitoring_trip.VehicleState: info
-    ru.gkmirep.pepsico_tms.kafka.point.PepsicoPointKafkaConsumerService: tinforace
+    ru.gkmirep.pepsico_tms.kafka.point.PepsicoPointKafkaConsumerService: info
     ru.gkmirep.pepsico_tms.kafka.TelematicsDataKafkaConsumerService: info
     ru.gkmirep.pepsico_tms.kafka.object.ObjectKafkaProducerService: info
     ru.gkmirep.pepsico_tms.kafka.object.ObjectKafkaConsumerService: info
