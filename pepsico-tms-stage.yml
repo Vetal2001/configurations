@@ -90,7 +90,6 @@ mirep:
     XlsxTripReportService: TRACE
     XlsxParsingService: INFO
     object-kafka-consumer-service: INFO
-    object-kafka-consumer-service: INFO
     trips-file-name-consumer-service: INFO
 logging:
   level:
