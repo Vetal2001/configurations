@@ -34,6 +34,7 @@ kafka:
     pepsico-point-edit-topic: pepsico-point-edit-topic
     pepsico-point-new: pepsico-point-new-topic
     points-statuses: pepsico-statuses
+    pepsico-trips: pepsico-trips
   trusted: '*'
 
 
