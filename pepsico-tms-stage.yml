@@ -89,9 +89,9 @@ mirep:
     TripReportService: TRACE
     XlsxTripReportService: TRACE
     XlsxParsingService: INFO
-    object-kafka-consumer-service: TRACE
     object-kafka-consumer-service: INFO
-    trips-file-name-consumer-service: TRACE
+    object-kafka-consumer-service: INFO
+    trips-file-name-consumer-service: INFO
 logging:
   level:
     org.springframework.data.mongodb: trace
