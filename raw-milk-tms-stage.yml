@@ -105,12 +105,12 @@ logging:
     ru.gkmirep.raw_milk_tms.service.mongo.TripMongoServiceImpl: trace
     ru.gkmirep.raw_milk_tms.service.processing.TripCalculatingServiceImpl: trace
     ru.gkmirep.raw_milk_tms.service.processing.TripProcessingServiceImpl: trace
-    #core
-    ru.gkmirep.core.services.trips.TripCalculatingService: trace
-    ru.gkmirep.core.services.trips.v2.TripManageService: trace
-    ru.gkmirep.core.services.trips.TripProcessingService: trace
-    ru.gkmirep.core.services.trips.TripRedisService: trace
-    ru.gkmirep.core.services.HttpGeoService: trace
+    #libs
+    ru.gkmirep.trip_lib.services.TripCalculatingService: trace
+    ru.gkmirep.trip_lib.services.TripManageService: trace
+    ru.gkmirep.trip_lib.services.TripProcessingService: trace
+    ru.gkmirep.trip_lib.services.TripRedisService: trace
+    ru.gkmirep.geo_lib.services.HttpGeoService: trace
   file:
     name: logs/raw-milk-tms.log
   # logback:
