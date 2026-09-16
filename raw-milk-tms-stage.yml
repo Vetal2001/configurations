@@ -81,6 +81,7 @@ mirep:
     #services
     TripParsingService: DEBUG
     TripProcessingServiceImpl: TRACE
+    TripProcessingService: TRACE
   
 logging:
   level:
