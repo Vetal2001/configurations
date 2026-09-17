@@ -56,12 +56,12 @@ cassandra:
 
 
 kafka:
-  read-all-data: true
+  read-all-data: false
   max-message-size: 5242880
   hosts: 192.168.1.41:9092
   consumer-group: dev-object-service-1
   telematics:
-    max-processed-queue: 500000
+    max-processed-queue: 100000
   consumers:
     telematics-consumer: telematics-consumer-1
   topics:
